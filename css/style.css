@@ -1,0 +1,12 @@
+#main_menu {
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    width: 10px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    content: "";
+}
