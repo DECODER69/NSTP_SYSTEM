@@ -171,3 +171,18 @@ body{
     margin-bottom: 20px;
   }
 }
+
+@media screen and (max-height: 600px) {
+  .sidebar {padding-top: 5px;}
+  .sidebar a {font-size: 16px;}
+}
+
+@media screen and (max-height: 550px) {
+  .sidebar {padding-top: 5px;}
+  .sidebar a {font-size: 14px;}
+}
+
+@media screen and (max-height: 500px) {
+  .sidebar {padding-top: 5px;}
+  .sidebar a {font-size: 10px;}
+}
