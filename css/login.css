@@ -1,27 +1,6 @@
-body {
+body{
     width: 100%;
     display: flex;
-<<<<<<< HEAD
-    background-color: #FEE300;
-}
-
-.container-1 {
-    width: 100%;
-}
-
-.welcome {
-    width: 70%;
-    background-color: #00ecc5;
-    float: right;
-    height: 100VH;
-}
-
-#logo {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    margin: auto;
-=======
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -33,22 +12,9 @@ body {
     height: 75vh;
     background-color:rgb(57,75,88);
     margin: 100px; 
->>>>>>> 2946d59dab2ba9afb129c7b226f2728826ceb3a7
 }
 .container-1 .left{
 
-<<<<<<< HEAD
-#rotclogo {
-    margin-top: -150px;
-}
-
-#logo img {
-    width: 200px;
-    height: 200px;
-}
-
-form {
-=======
 }
 
 .container-1 .right{
@@ -56,63 +22,31 @@ form {
     background-color: black;
     height: 75vh;
     float: right;
->>>>>>> 2946d59dab2ba9afb129c7b226f2728826ceb3a7
     display: grid;
     border:solid white 1px;
     background-color:rgb(57,75,88);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
-    margin-top: 100px;
-    width: 30%;
-    float: left;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-.user {
-    margin-top: 20px;
-}
-
-.user1,
-.user {
-    padding-left: 10px;
-=======
-#logo img {
-    width: 200px;
-    height: 200px;
-}
->>>>>>> c562cc994913ea09c4f07617c3d66c82a7c268f1
 .user1,.user{
     padding-left: 20px;
->>>>>>> 2946d59dab2ba9afb129c7b226f2728826ceb3a7
     height: 40px;
     color:white;
     border: transparent;
-<<<<<<< HEAD
-    background-color: #520303;
-    border-bottom: 2px solid white;
-=======
     background-color:rgb(57,75,88);
     border-bottom:2px solid white;
     margin-left: 5%;
-<<<<<<< HEAD
     margin-right:5% ;
     margin: -5% 5% -5%;
-=======
-     margin-right:5% ;
->>>>>>> 2946d59dab2ba9afb129c7b226f2728826ceb3a7
->>>>>>> c562cc994913ea09c4f07617c3d66c82a7c268f1
 }
-
 h1 {
     text-align: center;
-    margin-top: -100px;
+    margin-top: 50px;
     margin-bottom: 30px;
 }
-
-.login {
+.login{
     font-weight: bolder;
     width: 90%;
     height: 50px;
@@ -122,14 +56,6 @@ h1 {
     border: solid 1px;
     border-radius: 5px;
 }
-<<<<<<< HEAD
-
-.sign-up a {
-    color: #FEE300;
-}
-
-akjdajkbhdjkashdjkdashjkasjkhdajkshdjkashd
-=======
 .sign-up a{
     color: white;
 }
@@ -141,4 +67,3 @@ akjdajkbhdjkashdjkdashjkasjkhdajkshdjkashd
     color: white;
 }
 
->>>>>>> 2946d59dab2ba9afb129c7b226f2728826ceb3a7
