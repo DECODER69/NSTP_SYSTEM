@@ -2,87 +2,11 @@
     background-color: rgb(22, 27, 34);
 }
 
-.navbar {
-    background-color: rgb(22, 27, 34) !important;
-    width: 100% !important;
-}
-
-.navbar img {
-    width: 50px;
-}
-
-.nav-link {
-    color: rgb(255, 255, 255) !important;
-}
-
 .navbar-brand {
-    color: rgb(255, 255, 255) !important;
-    margin-left: 10px;
-    font-size: 30px !important;
-}
-
-.container2 {
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    background-color: rgb(22, 27, 34);
-}
-
-.container2 #logo {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(22, 27, 34);
-}
-
-#logo img {
-    background-color: rgb(22, 27, 34);
-    width: 50px;
-    height: auto;
-    margin-left: 50px;
-    margin-top: 15px;
-}
-
-#enter-dashboard {
-    padding: 5px;
-    width: 870px;
-    float: right;
-}
-
-#sign-up {
-    margin-right: 8px;
-    float: right;
-    border-color: aliceblue;
-}
-
-#sign-up button {
     color: aliceblue !important;
-    width: 150px;
-    height: 40px;
-    border-radius: 15px;
-    border: solid white;
-    border-width: 2px;
-    font-size: 20px;
-    float: right;
+    font-weight: bolder;
+    font-size: 40px !important;
 }
 
-#sign-up button:hover {
-    color: rgb(128, 128, 128) !important;
-    border-color: rgb(128, 128, 128) !important;
-}
 
-#sign-in {
-    float: right;
-    margin-right: 8px;
-}
-
-#sign-in button {
-    color: aliceblue !important;
-    width: 150px;
-    height: 40px;
-    font-size: 20px;
-    border: none !important;
-}
-
-#sign-in button:hover {
-    color: rgb(128, 128, 128) !important;
-}
+/* TYPEWRITER */
