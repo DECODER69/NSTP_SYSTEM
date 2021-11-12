@@ -9,4 +9,13 @@
 }
 
 
-/* TYPEWRITER */
+/* signup in button */
+
+.signup {
+    display: inline;
+}
+
+.signup #signin button {
+    color: aliceblue;
+    border: none;
+}
