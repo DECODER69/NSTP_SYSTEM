@@ -1,44 +1,68 @@
-* {
-    background-color: rgb(57, 75, 88);
-}
-
-.navbar-brand {
-    color: aliceblue !important;
-    font-weight: bolder;
-    font-size: 40px !important;
-}
-
-
-/* signup in button */
-
-.signup {
-    display: inline;
-}
-
-.signup #signin button {
-    color: aliceblue;
-    border: none;
-    font-weight: 500px;
-    font-size: 20px;
-}
-
-.signup #signup button {
-    color: aliceblue;
-    border-style: solid;
-    border-width: 1px;
-    width: 100px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: 500px;
-}
-
-.signup #signup button:hover {
-    background-color: rgb(37, 37, 37);
-}
-
-.container-1 {
-    width: 30%;
-    height: 30%;
-    float: right;
-    margin-right: 20px;
-}
+    * {
+        background-color: rgb(57, 75, 88);
+    }
+    
+    .navbar-brand {
+        color: aliceblue !important;
+        font-weight: bolder;
+        font-size: 40px !important;
+    }
+    /* signup in button */
+    
+    .signup {
+        display: inline;
+    }
+    
+    .signup #signin button {
+        color: aliceblue;
+        border: none;
+        font-weight: 500px;
+        font-size: 20px;
+    }
+    
+    .signup #signup button {
+        color: aliceblue;
+        border-style: solid;
+        border-width: 1px;
+        width: 100px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 500px;
+    }
+    
+    .signup #signup button:hover {
+        background-color: rgb(37, 37, 37);
+    }
+    
+    .container-1 {
+        width: 100%;
+        height: 100VH;
+        display: flex;
+    }
+    
+    .greetings {
+        width: 50%;
+    }
+    
+    .container-1 .greetings h1 {
+        font-size: 80px;
+        font-weight: bolder;
+        color: aliceblue;
+        margin-left: 100px;
+        margin-top: 100px;
+        text-align: justify;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+    
+    .container-1 .greetings h2 {
+        color: aliceblue;
+        margin-left: 100px;
+        margin-top: 20px;
+        text-align: justify;
+        padding: 10px;
+    }
+    
+    #carouselExampleControls {
+        width: 50% !important;
+    }
