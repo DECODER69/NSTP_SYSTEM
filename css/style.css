@@ -1,5 +1,5 @@
 * {
-    background-color: rgb(22, 27, 34);
+    background-color: rgb(57, 75, 88);
 }
 
 .navbar-brand {
@@ -18,4 +18,27 @@
 .signup #signin button {
     color: aliceblue;
     border: none;
+    font-weight: 500px;
+    font-size: 20px;
+}
+
+.signup #signup button {
+    color: aliceblue;
+    border-style: solid;
+    border-width: 1px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+.signup #signup button:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+.container-1 {
+    width: 30%;
+    height: 30%;
+    float: right;
+    margin-right: 20px;
 }
