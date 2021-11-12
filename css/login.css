@@ -3,7 +3,31 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color:rgb(57,75,88);
     
+}
+.container-1{
+    width: 75%;
+    height: 75vh;
+    background-color:rgb(57,75,88);
+    margin: 100px; 
+}
+.container-1 .left{
+
+}
+
+.container-1 .right{
+    width: 50%;
+    background-color: black;
+    height: 75vh;
+    float: right;
+    display: grid;
+    row-gap: 10px;
+    background-color:rgb(57,75,88);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
 #logo {
     width: 200px;
@@ -16,26 +40,15 @@ body{
     width: 200px;
     height: 200px;
 }
-form{
-    display: grid;
-    row-gap: 10px;
-    padding: 70px 50px 70px 50px;
-    background-color: #520303;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    align-items: center;
-}
-
-.user{
-    margin-top: 20px;
-}
 .user1,.user{
-    padding-left: 10px;
+    padding-left: 20px;
     height: 40px;
     color:white;
     border: transparent;
-    background-color:#520303;
+    background-color:rgb(57,75,88);
     border-bottom:2px solid white;
+    margin-left: 5%;
+     margin-right:5% ;
 }
 h1 {
     text-align: center;
@@ -44,11 +57,22 @@ h1 {
 }
 .login{
     font-weight: bolder;
-    width: 100%;
+    width: 90%;
     height: 50px;
     justify-self: center;
+    color: white;
+    background-color: transparent;
+    border: solid 1px;
+    border-radius: 5px;
 }
 .sign-up a{
-    color: #FEE300;
+    color: white;
 }
-akjdajkbhdjkashdjkdashjkasjkhdajkshdjkashd
+.sign-up{
+    text-align: center;
+}
+.login:hover{
+    background-color:rgb(93, 115, 131);
+    color: white;
+}
+
