@@ -5,19 +5,33 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+<<<<<<< HEAD
     background-color:rgb(57,75,88);
     height: 1250px;
+=======
+    background-color: rgb(57, 75, 88);
+    height: 1050px;
+>>>>>>> 40bccabf9c115b521df9f6aa2b0ab4b87bb14f92
 }
 
 .header {
     margin: 0;
+<<<<<<< HEAD
     background-color:rgb(57,75,88);
+=======
+    background-color: rgb(0, 0, 0);
+>>>>>>> 40bccabf9c115b521df9f6aa2b0ab4b87bb14f92
     height: 110px;
 }
 
 #logo img {
+<<<<<<< HEAD
     width: 100px;
     height: 90px;
+=======
+    width: 114px;
+    height: 100px;
+>>>>>>> 40bccabf9c115b521df9f6aa2b0ab4b87bb14f92
     /* padding: 10px; */
     margin-top: 5px;
     margin-left: 15px;
@@ -53,6 +67,7 @@ body{
     padding: 20px;
     padding-left: 50px;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .registration {
@@ -273,3 +288,5 @@ body{
 
 /* 
 right part */
+
+HAHAHA
