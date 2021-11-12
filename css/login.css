@@ -29,10 +29,10 @@ form{
 .user{
     margin-top: 20px;
 }
-.user1, .user{
+.user1,.user{
     padding-left: 10px;
     height: 40px;
-    color: red;
+    color:white;
     border: transparent;
     background-color:#520303;
     border-bottom:2px solid white;
