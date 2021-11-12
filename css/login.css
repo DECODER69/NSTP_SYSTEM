@@ -1,10 +1,20 @@
-body{
+body {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    background-color: #FEE300;
 }
+
+.container-1 {
+    width: 100%;
+}
+
+.welcome {
+    width: 70%;
+    background-color: #00ecc5;
+    float: right;
+    height: 100VH;
+}
+
 #logo {
     width: 200px;
     height: 200px;
@@ -12,11 +22,16 @@ body{
     margin: auto;
 }
 
+#rotclogo {
+    margin-top: -150px;
+}
+
 #logo img {
     width: 200px;
     height: 200px;
 }
-form{
+
+form {
     display: grid;
     row-gap: 10px;
     padding: 70px 50px 70px 50px;
@@ -24,31 +39,40 @@ form{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
+    margin-top: 100px;
+    width: 30%;
+    float: left;
 }
 
-.user{
+.user {
     margin-top: 20px;
 }
-.user1, .user{
+
+.user1,
+.user {
     padding-left: 10px;
     height: 40px;
     color: red;
     border: transparent;
-    background-color:#520303;
-    border-bottom:2px solid white;
+    background-color: #520303;
+    border-bottom: 2px solid white;
 }
+
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: -100px;
     margin-bottom: 30px;
 }
-.login{
+
+.login {
     font-weight: bolder;
     width: 100%;
     height: 50px;
     justify-self: center;
 }
-.sign-up a{
+
+.sign-up a {
     color: #FEE300;
 }
+
 akjdajkbhdjkashdjkdashjkasjkhdajkshdjkashd
