@@ -175,20 +175,20 @@ body{
 @media screen and (max-height: 600px) {
   .sidebar {padding-top: 5px;}
   .sidebar a {font-size: 16px;}
-  .rotclogo {width: 70px;}
-  .rotclogo {height: 70px;}
+  .rotclogo {width: 75px;}
+  .rotclogo {height: 75px;}
 }
 
 @media screen and (max-height: 550px) {
   .sidebar {padding-top: 5px;}
   .sidebar a {font-size: 14px;}
-  .rotclogo { width: 60px;}
-  .rotclogo {height: 60px;}
+  .rotclogo { width: 65px;}
+  .rotclogo {height: 65px;}
 }
 
 @media screen and (max-height: 500px) {
   .sidebar {padding-top: 5px;}
   .sidebar a {font-size: 10px;}
-  .rotclogo {width: 50px;}
-  .rotclogo {height: 50px;}
+  .rotclogo {width: 55px;}
+  .rotclogo {height: 55px;}
 }
