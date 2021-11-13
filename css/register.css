@@ -1,19 +1,23 @@
+body {
+    background-color: rgb(57, 75, 88);
+}
+
 #bg-color {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(255, 255, 255);
-    height: 1050px;
+    background-color: rgb(57, 75, 88);
+    height: 1250px;
 }
 
 .header {
     margin: 0;
-    background-color: rgb(22, 27, 34);
+    background-color: rgb(57, 75, 88);
     height: 110px;
 }
 
 #logo img {
-    width: 100px;
+    width: 114px;
     height: 100px;
     /* padding: 10px; */
     margin-top: 5px;
@@ -50,6 +54,7 @@
     padding: 20px;
     padding-left: 50px;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .registration {

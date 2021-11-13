@@ -1,75 +1,78 @@
-body{
+body {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color:rgb(57,75,88);
-    
+    background-color: rgb(57, 75, 88);
 }
-.container-1{
+
+.container-1 {
     width: 75%;
     height: 75vh;
-
-    margin: 100px; 
+    margin: 100px;
 }
-.container-1 .left{
 
-    
+.container-1 .left {
     height: 75vh;
     background-color: transparent;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     display: grid;
-    
 }
-.container-1 .right{
+
+.container-1 .right {
     width: 40%;
     height: 75vh;
     float: right;
     display: grid;
     /* border:solid white 1px; */
-    background-color:rgb(57,75,88);
+    background-color: rgb(57, 75, 88);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
 }
 
-.user1,.user{
+.user1,
+.user {
     padding-left: 20px;
     height: 40px;
-    color:white;
+    color: white;
     border: transparent;
-    background-color:rgb(57,75,88);
-    border-bottom:2px solid white;
+    background-color: rgb(57, 75, 88);
+    border-bottom: 2px solid white;
     margin-left: 5%;
-    margin-right:5% ;
+    margin-right: 5%;
     margin: -5% 5% -5%;
 }
+
 h1 {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
 }
-.login{
+
+.login {
     font-weight: bolder;
     width: 90%;
     height: 50px;
     justify-self: center;
     color: white;
     background-color: transparent;
-    border: solid .5px; 
+    border: solid .5px;
     border-radius: 5px;
 }
-.sign-up a{
-    color: white;
-}
-.sign-up{
-    margin-bottom: 15%;
-    text-align: center;
-}
-.login:hover{
-    background-color:rgb(93, 115, 131);
+
+.sign-up a {
     color: white;
 }
 
+.sign-up {
+    margin-bottom: 15%;
+    text-align: center;
+}
+
+.login:hover {
+    background-color: rgb(93, 115, 131);
+    color: white;
+}

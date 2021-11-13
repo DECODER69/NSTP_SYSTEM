@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(57, 75, 88);
+    text-align: center;
+}
+
+#select {
+    font-size: 100px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
+}
