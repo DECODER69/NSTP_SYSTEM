@@ -14,7 +14,7 @@
         }
         
         #headertext {
-            margin-left: -450px;
+            margin-left: -60px;
             height: auto;
             width: 400px;
             text-align: center;
@@ -41,7 +41,7 @@
         .nav-btn {
             display: inline-block;
             width: 200px;
-            margin-right: -400px;
+            margin-right: 450px;
             margin-top: 2px;
         }
         
@@ -51,7 +51,6 @@
             padding: 16px;
             font-size: 16px;
             border: none;
-            font-weight: bolder;
             float: left;
         }
         
@@ -61,7 +60,7 @@
             padding: 16px;
             font-size: 16px;
             border: none;
-            font-weight: bolder;
+            margin-left: 17px;
         }
         
         .dropdown {
