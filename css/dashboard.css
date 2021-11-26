@@ -829,7 +829,7 @@ body {background: #eeeae9;}
 		color: #ff8c00;
 	}
 	.app__main {
-		background: #fbf9fa;
+		background: gainsboro;
 		width: 65%; height: 100%;
 		float: left;
 		padding: 40px;
@@ -844,3 +844,4 @@ body {background: #eeeae9;}
 		.calendar .datepicker table {
 			width: 100%;
 		}
+ 
