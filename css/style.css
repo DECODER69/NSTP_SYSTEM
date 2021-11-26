@@ -1,6 +1,6 @@
-        /* * {
-        background-color: rgb(57, 75, 88);
-    } */
+        * {
+            padding: 0.1px;
+        }
         
         #topline {
             border: 5px solid rgb(109, 0, 0);
@@ -14,7 +14,7 @@
         }
         
         #headertext {
-            margin-left: -60px;
+            margin-left: -500px;
             height: auto;
             width: 400px;
             text-align: center;
@@ -39,9 +39,8 @@
         /* dropdown */
         
         .nav-btn {
-            display: inline-block;
-            width: 200px;
-            margin-right: 450px;
+            display: inline;
+            width: 400px;
             margin-top: 2px;
         }
         
@@ -49,23 +48,19 @@
             background-color: transparent;
             color: rgb(109, 0, 0);
             padding: 16px;
-            font-size: 16px;
+            font-size: 20px;
             border: none;
-            float: left;
         }
         
         .dropbtn {
             background-color: transparent;
             color: rgb(109, 0, 0);
-            padding: 16px;
-            font-size: 16px;
+            font-size: 20px;
             border: none;
-            margin-left: 17px;
         }
         
         .dropdown {
-            position: relative;
-            display: inline-block;
+            display: inline-flex;
         }
         
         .dropdown-content {
@@ -74,7 +69,8 @@
             background-color: #f1f1f1;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 2;
+            z-index: 3;
+            margin-top: 60px;
         }
         
         .dropdown-content a {
@@ -98,12 +94,11 @@
         }
         /* about */
         /* signup in button */
-        
-        .signup {
+        /* .signupx {
             display: inline;
-        }
+        } */
         
-        .signup #signin button {
+        .signin button {
             color: rgb(109, 0, 0);
             background-color: transparent;
             border: none;
@@ -111,7 +106,7 @@
             font-size: 20px;
         }
         
-        .signup #signup button {
+        .signup button {
             color: rgb(109, 0, 0);
             border-style: solid rgb(109, 0, 0);
             ;
@@ -120,10 +115,6 @@
             border-radius: 5px;
             font-size: 20px;
             font-weight: 500px;
-        }
-        
-        .signup #signup button:hover {
-            background-color: rgb(168, 168, 168);
         }
         
         #bottomline {
@@ -348,5 +339,88 @@
             }
             .footer-distributed .footer-center i {
                 margin-left: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .navbar-brand {
+                width: 100%;
+                display: flex;
+                align-content: center!important;
+                align-items: center;
+            }
+            .navbar-brand .d-inline-block {
+                display: block;
+                margin-left: 40%;
+            }
+            #headertext {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        @media (max-width: 855px) {
+            .nav-btn {
+                display: flex;
+                width: 100%;
+                margin: auto;
+            }
+            .dropdown {
+                display: flex;
+                margin: auto;
+            }
+            .ftr .footer-distributed {
+                margin-top: 1400px;
+            }
+            .signin button {
+                margin-top: 15px;
+            }
+            .signup button {
+                margin-top: 15px;
+            }
+        }
+        
+        @media screen and (min-device-width: 360px) and (max-device-width: 768px) {
+            .nav-btn {
+                display: flex;
+                margin: auto;
+            }
+            .home {
+                font-size: 12px;
+            }
+            .dropbtn {
+                font-size: 12px;
+            }
+            .signin button {
+                font-size: 12px;
+                margin-top: 15px;
+            }
+            .signup button {
+                font-size: 12px;
+                margin-top: 15px;
+            }
+            .ftr .footer-distributed {
+                margin-top: 2300px;
+            }
+            #headertext {
+                width: 500px;
+            }
+        }
+        
+        @media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+            #headertext {
+                margin-left: 5px;
+            }
+            .ftr {
+                margin-top: 500px;
+            }
+        }
+        
+        @media screen and (max-width: 538px) {
+            #headertext {
+                margin: auto;
+            }
+            .navbar-brand .d-inline-block {
+                margin-left: 50%;
             }
         }
