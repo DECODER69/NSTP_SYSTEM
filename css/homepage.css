@@ -2,7 +2,11 @@ body {
     background-color: rgb(57, 75, 88);
     text-align: center;
 }
+.navbar{
+    background-color: rgb(57, 75, 88)!important;
+    border-bottom: white solid 2px;
 
+}
 .navbar {
     background-color: rgb(57, 75, 88)!important;
 }
@@ -22,10 +26,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    margin-top: 20px;
+    margin: 200px;
+
+   
     /* background-color: transparent!important; */
 }
 
