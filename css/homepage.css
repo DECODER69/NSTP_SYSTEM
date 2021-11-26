@@ -5,33 +5,27 @@ body {
 .navbar{
     background-color: rgb(57, 75, 88)!important;
     border-bottom: white solid 2px;
-
+    
 }
 .navbar {
     background-color: rgb(57, 75, 88)!important;
 }
-
 .nav-link {
     color: white!important;
     font-size: 30px;
 }
-
 #select {
     font-size: 100px;
     font-weight: bolder;
     color: rgb(255, 255, 255);
 }
-
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 200px;
-
-   
     /* background-color: transparent!important; */
 }
-
 .card {
     background-color: rgb(57, 75, 88);
     box-shadow: 0 8px 32px 0 rgba(96, 97, 107, 0.37);
@@ -65,7 +59,6 @@ body {
     color: white;
     border: rgb(93, 115, 131);
 }
-
 .card1 a:hover {
     transform: scale(1.1);
     transition: transform .5s ease;
@@ -74,15 +67,11 @@ body {
     border: rgb(93, 115, 131);
     color: white;
 }
-
-
 /* footer */
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 * {
     font-family: Open Sans;
 }
-
 .footer-distributed {
     background-color: rgb(57, 75, 88);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -102,8 +91,6 @@ body {
     display: inline-block;
     vertical-align: top;
 }
-
-
 /* Footer left */
 
 .footer-distributed .footer-left {
