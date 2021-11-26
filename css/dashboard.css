@@ -94,15 +94,15 @@ body {
     border-bottom: 1px solid #e0e4e8;
 }
 
-.wrapper .main_content .info {
+.wrapper .main_content .info1 {
     margin: 20px;
     color: #717171;
     line-height: 25px;
 }
 
-.wrapper .main_content .info div {
+.wrapper .main_content .info1 div {
     margin-bottom: 20px;
-    margin: auto;
+    
 }
 
 .btn-drop {
@@ -112,4 +112,3 @@ body {
 .user {
     color: white;
 }
-
