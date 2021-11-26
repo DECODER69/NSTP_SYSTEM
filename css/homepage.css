@@ -17,16 +17,20 @@ body {
     margin: 0 auto;
     width: 100%;
     margin-top: 20px;
+   
     /* background-color: transparent!important; */
 }
-.card{
+
+.card {
     background-color: transparent;
     color: white;
     border: transparent;
 }
-.btn-primary{
-    border: solid 1px;
+
+.btn-primary {
+    border: transparent;
     background-color: transparent;
+  
 }
 
 .card:hover {
