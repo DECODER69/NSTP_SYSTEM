@@ -98,6 +98,7 @@ body {
     margin: 20px;
     color: #717171;
     line-height: 25px;
+    position: absolute;
 }
 
 .wrapper .main_content .info1 div {
@@ -114,11 +115,7 @@ body {
 }
 
 
- * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
+
 
 html {
 	font-family: sans-serif; /* 1 */
@@ -812,7 +809,7 @@ body {background: #eeeae9;}
 }
 
 .app {
-	width: 969px; height: 580px;
+	width: 700px; height: 420px;
 	margin: 100px auto;
 }
 .app:after {
