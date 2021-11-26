@@ -44,9 +44,7 @@ body {
     margin-left: 5%;
     margin-right: 5%;
     margin: -5% 5% -5%;
- 
 }
-
 
 h1 {
     text-align: center;
@@ -78,3 +76,27 @@ h1 {
     background-color: rgb(93, 115, 131);
     color: white;
 }
+<<<<<<< HEAD
+=======
+
+@media (max-width: 1048px) {
+    .container {
+        display: inline-block;
+    }
+    .left {
+        display: inline-block;
+        background-color: black;
+        margin: auto;
+        width: 100px;
+    }
+    .left #logo {
+        width: 200px;
+        margin-top: -100px;
+    }
+    .right {
+        width: 100%;
+        margin: auto;
+        background-color: rosybrown;
+    }
+}
+>>>>>>> 94bad5415ef05f77bfb05a75f6db53b775ed7cc7
