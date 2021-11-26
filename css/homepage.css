@@ -17,7 +17,6 @@ body {
     margin: 0 auto;
     width: 100%;
     margin-top: 20px;
-<<<<<<< HEAD
     /* background-color: transparent!important; */
 }
 .card{
@@ -26,14 +25,12 @@ body {
     border: transparent;
 }
 .btn-primary{
-    border: transparent;
+    border: solid 1px;
     background-color: transparent;
-=======
 }
 
 .card:hover {
     transform: scale(1.1);
     transition: transform .5s ease;
     align-self: center;
->>>>>>> 9c2090664aee9128a7d55a33369f3c9dcbbc7552
 }
