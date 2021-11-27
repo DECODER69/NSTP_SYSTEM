@@ -416,11 +416,18 @@
             }
         }
         
-        @media screen and (max-width: 538px) {
+        @media (max-width: 999px) {
             #headertext {
-                margin: auto;
+                margin-left: 2%;
             }
             .navbar-brand .d-inline-block {
                 margin-left: 50%;
+            }
+        }
+        
+        @media(min-width:1000px) {
+            #headertext {
+                align-items: center;
+                margin-left: 2%;
             }
         }
