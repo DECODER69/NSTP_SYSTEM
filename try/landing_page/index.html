@@ -1,0 +1,144 @@
+<!-- LANDING PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANDING PAGE</title>
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/landingpage.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="logo" href="#">
+                <img src="image/tup.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="hamburger">
+                <i class="bi bi-list"></i>
+                
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <ul class="navbar-nav" id="cyrine">
+                        <li class="nav-item" id="title">
+                            <a class="nav-link active" aria-current="page" href="#">Technological University of the Philippines</a>
+                            <a class="nav-link active" aria-current="page" href="#">National Service Training Program</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-success" id="signin-btn" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- CAROUSEL -->
+
+    <main>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" id="carousel-img">
+                    <img src="image/im1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" id="carousel-img">
+                    <img src="image/im2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" id="carousel-img">
+                    <img src="image/im3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        <!-- FAQS -->
+        <div class="card text-center" id="FAQS">
+            <div class="card-body">
+                <h1 class="card-title">ALL ABOUT NSTP</h1>
+                <p class="card-text">Here are the Frequently Asked Question.</p>
+
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <h4 id="list-item-1">What is NSTP?</h4>
+            <p>Republic Act 9163 enabled the establishment of National Service Training Program for Tertiary Level students with an aim to promote civic consciousness among the youth and inculcate in them the spirit of nationalism and advance their involvement
+                in public and civic affairs. NSTP is a program designed to develop the youth’s physical, moral, spiritual, intellectual, and social well-being and promote defense preparedness and ethics of service while undergoing training in any of its
+                three program components. Its various components are specially designed to enhance the youth’s active contribution to the general welfare.</p>
+            <h4 id="list-item-2">What are its three program components?</h4>
+            <p>The NSTP has three components which are as follows: i. Reserve Officers’ Training Corps (ROTC) A program institutionalized under Sections 38 and 39 of Republic Act No. 7077 designed to provide military training to tertiary level students in
+                order to motivate, train, organize and mobilize them for national defense preparedness. ii. Literacy Training Service (LTS) A program designed to train students to become teachers of literacy and numeracy skills to school children, out
+                of school youth, and other segments of society in need of their service. iii. Civic Welfare Training Service (CWTS) It is composed of programs or activities contributory to the general welfare and the betterment of life for the members
+                of the community or the enhancement of its facilities, especially those devoted to improving health, education, environment, entrepreneurship, safety, recreation and morals of the citizenry.</p>
+            <h4 id="list-item-3">Who are required to complete the NSTP?</h4>
+            <p>Students of any baccalaureate degree course or at least two-year technical vocational courses in public and private educational institutions shall be required to complete one of the NSTP components as requisite for graduation. Exemptions only
+                apply to: i. Students who have already taken NSTP from a prior degree completed; ii. Transferees and shiftees who have completed NSTP prior to transferring or shifting; and iii. Foreign students or aliens</p>
+            <h4 id="list-item-4">How much time is needed to complete the NSTP?</h4>
+            <p>Each of the NSTP program components shall be undertaken for an academic period of two semesters (NSTP 1 and 2) or an equivalent one-semester integrated (NSTP 1-2) course. The allotted time for NSTP classes per semester is 54 – 90 hours. The
+                whole NSTP program weighs six units and should be taken for two semesters, three units each semester.</p>
+            <h4 id="list-item-5">How are the NSTP classes structured?</h4>
+            <p>Student enrolled in the first semester of NSTP shall undergo a Common Module phase which will focus on: citizenship training; drug education; disaster awareness, preparedness, and management; environmental protection; and other national security
+                concerns. Upon completion of the Common Module, the student must select the specific program component that he/she will pursue.</p>
+            <h4 id="list-item-6">Am I allowed to take NSTP 2 before NSTP 1?</h4>
+            <p>No. NSTP 1 is a prerequisite for NSTP 2.</p>
+            <h4 id="list-item-7">Am I allowed to take different program components for my NSTP 1 and 2?</h4>
+            <p>No, you have to take six (units) of the same component to complete NSTP. According to the Implementing Rules and Regulations of the National Service Training Program as mentioned in Rule III, Section 4, you are “required to complete one (1)
+                NSTP component of [your] choice as a graduation requirement.”</p>
+            <h4 id="list-item-8">Am I allowed to take the same program component but from different colleges?</h4>
+            <p>No. As a University policy, NSTP 1 and 2 should be taken in the same college.</p>
+            <h4 id="list-item-9">What activities are expected from NSTP 2 classes?</h4>
+            <p>NSTP 2 classes are mainly concerned with community engagement with the help of partner communities and organizations. CWTS and LTS students are required to conduct civic welfare and literacy activities or projects as part of the required 40-64
+                hours of community engagement.</p>
+            <h4 id="list-item-10">How are we graded in class?</h4>
+            <p>Numeric grading will be used for NSTP classes. The grading system is upon the discretion of the instructor who is handling the NSTP class. Grades for NSTP will not be included in the computation of the students’ weighted average.</p>
+            <h4 id="list-item-11">After graduation, what will happen to us?</h4>
+            <p>Graduates of the CWTS and LTS components of the NSTP shall belong to the National Service Reserve Corps (NSRC) and could be tapped by the State for literacy and civic welfare activities, especially in times of calamities while graduates of
+                the ROTC program shall form part of the Citizen Armed Force</p>
+            <h4 id="list-item-12">What if I break any of the rules related to taking classes in NSTP?</h4>
+            <p>Students who did not comply with the rules need to consult with the NSTP TUPC office.</p>
+        </div>
+    </main>
+    <!-- BOOTSTRAP BUNDLE -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/landingpage.js"></script>
+
+</body>
+
+</html>
