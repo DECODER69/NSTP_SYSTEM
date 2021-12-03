@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    padding: 20px 200px 20px 200px;
+    padding: 20px 20px 20px 20px;
 }
 
 h4 {
@@ -26,11 +26,11 @@ p {
 }
 
 #carouselExampleIndicators {
-    height: 50vh;
+    height: 100vh;
 }
 
 #carousel-img img {
-    height: 50vh;
+    height: 100vh;
 }
 
 nav {
@@ -55,13 +55,18 @@ nav {
     background: transparent;
 }
 
+#FAQS h1 {
+    color: #691a1b;
+    font-weight: bolder;
+}
+
 #navbarNavAltMarkup a {
     color: white;
     font-weight: bold;
 }
 
 #navbarNavAltMarkup a:focus {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #691a1b;
 }
 
 #logo img {
@@ -74,9 +79,9 @@ nav {
     font-size: 30px;
 }
 
-#title {
-    justify-self: flex-start;
-    border: 1px solid yellowgreen;
+.label {
+    margin: 0;
+    display: grid;
 }
 
 #signin-btn {
@@ -96,9 +101,22 @@ nav {
     main {
         padding: 0 10px 0 10px;
     }
+    nav {
+        position: fixed;
+        top: 0;
+    }
     #logo img {
         width: 60px;
         height: auto;
+    }
+    .label h4 {
+        font-size: 15px;
+    }
+    #carouselExampleIndicators {
+        height: 50vh;
+    }
+    #carousel-img img {
+        height: 50vh;
     }
 }
 
