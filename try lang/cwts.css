@@ -86,18 +86,8 @@ nav {
 }
 
 #try1 {
-    margin: auto;
     display: flex;
-}
-
-.card-header {
-    font-size: 30px!important;
-    font-weight: bolder;
-}
-
-iframe {
     margin: auto;
-    display: flex;
 }
 
 
@@ -138,4 +128,12 @@ iframe {
     nav {
         height: 200px;
     }
+}
+
+.tableCon {
+    margin-top: 30px;
+}
+
+.SearchBar{
+    float: right;
 }
