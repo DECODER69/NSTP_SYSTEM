@@ -85,6 +85,11 @@ nav {
     background-color: #b10012;
 }
 
+#try1 {
+    display: flex;
+    margin: auto;
+}
+
 
 /*Window size: tablet and phone*/
 
