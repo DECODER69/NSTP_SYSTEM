@@ -120,6 +120,13 @@ iframe {
     border: #691a1b solid 1px;
 }
 
+#title {
+    font-size: 100px;
+    font-weight: bolder;
+    margin: auto;
+    display: flex;
+}
+
 
 /*Window size: tablet and phone*/
 
@@ -160,8 +167,12 @@ iframe {
     }
 }
 
-@media only screen and (max-width: 929px) {
-    .card-img-top {
-        width: 100px!important;
+@media only screen and (max-width: 900px) {
+    .card-deck {
+        display: grid;
+        margin-top: 10px;
+    }
+    .card {
+        margin-top: 10px;
     }
 }
