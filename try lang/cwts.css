@@ -137,3 +137,7 @@ nav {
 .SearchBar {
     float: right;
 }
+
+.Head {
+    text-align: center;
+}
