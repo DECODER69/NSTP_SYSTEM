@@ -144,21 +144,17 @@ html {
 
 body {
     margin: 0;
-    background: #504f4f;
+    background: white;
     font-size: 1em;
-}
-
-.wrapper {
-    margin: 15px auto;
-    max-width: 1100px;
 }
 
 .container-calendar {
     background: #ffffff;
-    padding: 15px;
+    padding: 0px;
     max-width: 475px;
     margin: 0 auto;
     overflow: auto;
+    border: 1px solid black;
 }
 
 .button-container-calendar button {
@@ -180,7 +176,7 @@ body {
 .table-calendar td,
 .table-calendar th {
     padding: 5px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid black;
     text-align: center;
     vertical-align: top;
 }
@@ -198,6 +194,10 @@ body {
 /* sunday */
 
 .date-picker:nth-child(1) {
+    color: red;
+}
+
+.date-picker:nth-child(7) {
     color: red;
 }
 
@@ -230,7 +230,7 @@ body {
 
 .footer-container-calendar {
     margin-top: 1em;
-    border-top: 1px solid #dadada;
+    border-top: 1px solid black;
     padding: 10px 0;
 }
 
@@ -245,9 +245,17 @@ body {
     padding: 5px 1em;
 }
 
-.Carouselcon {
-    height: 200px;
-    width: 400px;
+.inside-carou {
+    width: 80%;
+    height: 50%;
     margin: auto;
-    display: flex;
+}
+
+.carousel-inner {
+    width: 100%;
+    max-height: 460px !important;
+}
+
+.body2 {
+    float: right;
 }
