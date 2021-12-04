@@ -25,23 +25,22 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" id="logo" href="#">
+            <a class="navbar-brand" id="logo" href="...">
                 <img src="image/tup.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
             </a>
-            <!-- eto footer -->
+
             <div class="label">
                 <h4>Technological University of the Philippines</h4>
-
-                <h4>National Service Training Program</h4>
+                <h4 id="try">National Service Training Program</h4>
             </div>
-            <!-- hanggang dito -->
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="hamburger">
                 <i class="bi bi-list"></i>
                 
           </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <!-- sa loob ng footer -->
+
                     <ul class="navbar-nav" id="cyrine">
 
                         <li class="nav-item">
@@ -55,9 +54,9 @@
                         </li>
 
                     </ul>
-                    <!-- hanggang dito -->
+
                     <form class="d-flex">
-                        <button class="btn btn-outline-success" id="signin-btn" type="submit">Login</button>
+                        <button class="btn btn-outline-success" id="signin-btn" type="submit"><a href="#enroll" id="asd">Login</a></button>
                     </form>
                 </div>
             </div>
@@ -103,80 +102,6 @@
         </div>
 
         <!-- CONTENT -->
-
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Collapsible Group Item #1
-                  </button>
-                    </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Collapsible Group Item #2
-                  </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Some placeholder content for the second accordion panel. This panel is hidden by default.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Collapsible Group Item #3
-                  </button>
-                    </h2>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingFour">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Collapsible Group Item #4
-                  </button>
-                    </h2>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Some placeholder content for the second accordion panel. This panel is hidden by default.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="heading5">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                    Collapsible Group Item #4
-                  </button>
-                    </h2>
-                </div>
-                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Some placeholder content for the second accordion panel. This panel is hidden by default.
-                    </div>
-                </div>
-            </div>
-        </div>
         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
             <h4 id="list-item-1">What is NSTP?</h4>
             <p>Republic Act 9163 enabled the establishment of National Service Training Program for Tertiary Level students with an aim to promote civic consciousness among the youth and inculcate in them the spirit of nationalism and advance their involvement
@@ -215,6 +140,56 @@
             <p>Students who did not comply with the rules need to consult with the NSTP TUPC office.</p>
         </div>
     </main>
+    <!-- CHOOSE WHERE TO ENROLL -->
+    <div class="card text-center" id="enroll">
+        <div class="card-body">
+            <h1 class="card-title">How to Enroll?</h1>
+            <p class="card-text">Choose your poison</p>
+
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card" id="option">
+                <img src="image/236.png" id="rotc" class="card-img-top" alt="...">
+                <div class="card-body" id="option1">
+
+                    <a href="#" class="btn btn-primary" id="btn">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" id="option">
+                <img src="image/261571398_293900185949124_50887664155632565_n.png" id="cwts" class="card-img-top" alt="...">
+                <div class="card-body" id="option1">
+
+                    <a href="#" class="btn btn-primary" id="btn">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <nav1 class="navbar navbar-expand-lg " id="footer">
+        <div class="collapse navbar-collapse" id="navbarNav1">
+            <ul class="navbar-nav">
+                <li class="nav-item1">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                </li>
+                <li class="nav-item1">
+                    <a class="nav-link" href="#"><i class="bi bi-twitter" style="color: white;" ></i></a>
+                </li>
+                <li class="nav-item1">
+                    <a class="nav-link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+    </nav1>
+
+
+    </div>
     <!-- BOOTSTRAP BUNDLE -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

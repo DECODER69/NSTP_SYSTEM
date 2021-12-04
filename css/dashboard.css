@@ -6,6 +6,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+<<<<<<< HEAD
 body {
     background-color: white;
 }
@@ -235,3 +236,250 @@ color: green;
   border-radius: 3px;
   padding: 5px 1em;
 }
+=======
+main {
+    padding: 20px 20px 20px 20px;
+}
+
+h4 {
+    color: #691a1b;
+}
+
+p {
+    color: #691a1b;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav {
+    background-color: white;
+    border-bottom: 1px solid #691a1b;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navbarNavAltMarkup li a {
+    color: #691a1b;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+#navbarNavAltMarkup a:hover {
+    color: #DF465A;
+}
+
+#FAQS {
+    margin-top: 10px;
+    background: transparent;
+}
+
+#FAQS h1 {
+    color: #691a1b;
+    font-weight: bolder;
+}
+
+#navbarNavAltMarkup a {
+    color: white;
+    font-weight: bold;
+}
+
+#navbarNavAltMarkup a:focus {
+    border-bottom: 1px solid #691a1b;
+}
+
+#logo img {
+    width: 150px;
+    height: auto;
+}
+
+#hamburger i {
+    color: #691a1b;
+    font-size: 30px;
+}
+
+.label {
+    margin: 0;
+    display: grid;
+}
+
+#signin-btn {
+    color: #691a1b;
+    border: 1px solid #691a1b;
+}
+
+#signin-btn:hover {
+    background-color: #b10012;
+}
+
+#try1 {
+    display: flex;
+    margin: auto;
+}
+
+.container {
+    height: 50vh;
+}
+
+
+/*Window size: tablet and phone*/
+
+@media only screen and (max-width: 1000px) {
+    nav,
+    main {
+        padding: 0 10px 0 10px;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+    }
+    #logo img {
+        width: 60px;
+        height: auto;
+    }
+    .label h4 {
+        font-size: 15px;
+    }
+    #carousel-img img {
+        height: 50vh;
+    }
+}
+
+
+/*Window size: full screen or Computer*/
+
+@media only screen and (min-width: 1000px) {
+    #navbarNavAltMarkup {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav {
+        height: 200px;
+    }
+}
+
+.tableCon {
+    margin-top: 30px;
+}
+
+.SearchBar {
+    float: right;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #444;
+}
+
+body {
+    margin: 0;
+    background: #504f4f;
+    font-size: 1em;
+}
+
+.wrapper {
+    margin: 15px auto;
+    max-width: 1100px;
+}
+
+.container-calendar {
+    background: #ffffff;
+    padding: 15px;
+    max-width: 475px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #00a2b7;
+    color: #fff;
+    border: 1px solid #0aa2b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-calendar td,
+.table-calendar th {
+    padding: 5px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: top;
+}
+
+.date-picker.selected {
+    font-weight: bold;
+    outline: 1px dashed #00BCD4;
+}
+
+.date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+}
+
+
+/* sunday */
+
+.date-picker:nth-child(1) {
+    color: red;
+}
+
+
+/* friday */
+
+.date-picker:nth-child(6) {
+    color: green;
+}
+
+#monthAndYear {
+    text-align: center;
+    margin-top: 0;
+}
+
+.button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+}
+
+#previous {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+.footer-container-calendar {
+    margin-top: 1em;
+    border-top: 1px solid #dadada;
+    padding: 10px 0;
+}
+
+.footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #585858;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 5px 1em;
+}
+
+.Carouselcon {
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    display: flex;
+}
+>>>>>>> 79c6799d30b5ad756833723c7a6a2c01e879f99c

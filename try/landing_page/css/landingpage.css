@@ -8,6 +8,7 @@
 
 body {
     background-color: white;
+    overflow-x: hidden;
 }
 
 main {
@@ -38,6 +39,7 @@ nav {
     border-bottom: 1px solid #691a1b;
     padding-left: 20px;
     padding-right: 20px;
+    border-top: 10px solid#691a1b;
 }
 
 #navbarNavAltMarkup li a {
@@ -84,13 +86,50 @@ nav {
     display: grid;
 }
 
-#signin-btn {
+#signin-btn a {
     color: #691a1b;
-    border: 1px solid #691a1b;
 }
 
 #signin-btn:hover {
     background-color: #b10012;
+}
+
+#try {
+    display: flex;
+    margin: auto;
+}
+
+#navbarNav1 {
+    display: flex;
+    justify-content: center;
+}
+
+#footer {
+    background-color: #691a1b;
+}
+
+#rotc {
+    height: auto;
+    width: 400px;
+    justify-self: center;
+}
+
+#cwts {
+    height: auto;
+    width: 400px;
+    justify-self: center;
+}
+
+#option {
+    display: grid;
+}
+
+#option1 {
+    display: grid;
+}
+
+#btn {
+    justify-self: center;
 }
 
 
