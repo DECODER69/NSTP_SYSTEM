@@ -9,7 +9,7 @@
 #cards {
     border: transparent;
     margin: auto;
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
 body {
@@ -43,4 +43,9 @@ a {
 #back {
     color: #691a1b;
     font-weight: bold;
+}
+
+#name {
+    display: flex;
+    gap: 5px;
 }
