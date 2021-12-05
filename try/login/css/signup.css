@@ -63,3 +63,9 @@ a {
     justify-content: center;
     gap: 5px;
 }
+
+@media only screen and (max-width: 1000px) {
+    body {
+        padding: 30px;
+    }
+}
