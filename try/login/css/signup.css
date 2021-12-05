@@ -7,9 +7,11 @@
 }
 
 #cards {
+    display: grid;
     border: transparent;
     margin: auto;
     grid-gap: 10px;
+    width: 500px;
 }
 
 body {
@@ -22,6 +24,11 @@ body {
     background-color: transparent;
     height: 50px;
     width: 50px;
+    transition: transform .7s ease-in-out;
+}
+
+#logo img:hover {
+    transform: rotate(360deg);
 }
 
 #logo {
@@ -33,6 +40,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    align-items: center;
 }
 
 a {
@@ -47,5 +55,11 @@ a {
 
 #name {
     display: flex;
+    gap: 5px;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
     gap: 5px;
 }

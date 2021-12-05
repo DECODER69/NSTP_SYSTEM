@@ -23,7 +23,7 @@
 
 <body>
 
-    <div class="card" id="cards" style="width: 18rem;">
+    <form action="" id="cards">
         <a href="../../landing_page/index.html">
             <div class="top">
                 <button id="logo"><img src="../images/tup.png"></button>
@@ -31,18 +31,34 @@
             </div>
         </a>
         <div class="form-group" id="name">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Surname">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Given Name">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="M.I">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Surname" required>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Given Name" required>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="M.I" required>
+        </div>
+        <div class="form-group" id="name">
+            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Age" required>
+
+            <select id="inputState" class="form-control" required>
+              <option selected>Choose Gender...</option>
+              <option>Female</option>
+              <option>Male</option>
+            </select>
         </div>
         <div class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Complete Address" required>
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="+63" required>
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password" required>
         </div>
 
 
@@ -51,7 +67,8 @@
         <button type="submit" class="btn btn-primary">Submit</button>
         <div class="signup"> Already have an account? <a href="index.html" id="back">Login</a> here.
         </div>
-    </div>
+
+    </form>
 
     <!-- BOOTSTRAP BUNDLE -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

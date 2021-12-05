@@ -22,6 +22,11 @@ body {
     background-color: transparent;
     height: 50px;
     width: 50px;
+    transition: transform .7s ease-in-out;
+}
+
+#logo img:hover {
+    transform: rotate(360deg);
 }
 
 #logo {
