@@ -246,14 +246,14 @@ body {
 }
 
 .inside-carou {
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    height: 80%;
     margin: auto;
 }
 
 .carousel-inner {
     width: 100%;
-    max-height: 460px !important;
+    max-height: 600px;
 }
 
 .body2 {
