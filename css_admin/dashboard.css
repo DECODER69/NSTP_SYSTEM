@@ -255,18 +255,8 @@ body {
 
 /* navbar */
 
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
 body {
     background-color: white;
-}
-
-main {
-    padding: 20px 20px 20px 20px;
 }
 
 h4 {
@@ -386,7 +376,7 @@ nav {
         justify-content: flex-end;
     }
     nav {
-        height: 170px;
+        height: 200px;
     }
 }
 
@@ -425,19 +415,16 @@ nav {
         margin-top: 10px;
         height: 100vh;
         justify-content: center;
-        border: #00a2b7 solid 1px;
     }
     .file-upload {
         display: grid;
         width: 600px;
         margin: auto;
-        border: #00a2b7 solid 1px;
     }
     .wrapper {
         display: grid;
         width: 300px;
         margin: auto;
-        border: #00a2b7 solid 1px;
     }
 }
 
