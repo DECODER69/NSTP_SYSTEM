@@ -183,7 +183,7 @@ body {
 
 .date-picker.selected {
     font-weight: bold;
-    outline: 1px dashed #00BCD4;
+    outline: 2px solid red;
 }
 
 .date-picker.selected span {
