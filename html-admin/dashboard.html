@@ -72,75 +72,77 @@
 
 
     <!-- Grid  -->
+    <div class="frames">
+        <div class=" col-6">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
+            <div class="file-upload">
+                <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
 
-                <div class="file-upload">
-                    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
-            
-                    <div class="image-upload-wrap">
-                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                        <div class="drag-text">
-                            <h3>Drag and drop a file or select add Image</h3>
-                        </div>
-                    </div>
-                    <div class="file-upload-content">
-                        <img class="file-upload-image" src="#" alt="your image" />
-                        <div class="image-title-wrap">
-                            <input class="remove-image" type="submit">
-                            <span class="image-title">Uploaded Image</span>
-                        </div>
+                <div class="image-upload-wrap">
+                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                    <div class="drag-text">
+                        <h3>Drag and drop a file or select add Image</h3>
                     </div>
                 </div>
-
+                <div class="file-upload-content">
+                    <img class="file-upload-image" src="#" alt="your image" />
+                    <div class="image-title-wrap">
+                        <input class="remove-image" type="submit">
+                        <span class="image-title">Uploaded Image</span>
+                    </div>
+                </div>
             </div>
 
+        </div>
 
-            <div class="body2 col-6">
-                <!-- Calendar -->
 
-                <div class="wrapper">
-                    <div class="container-calendar">
-                        <h3 id="monthAndYear"></h3>
-                        <div class="button-container-calendar">
-                            <button id="previous" onclick="previous()">&#8249;</button>
-                            <button id="next" onclick="next()">&#8250;</button>
-                        </div>
+        <div class=" col-6">
+            <!-- Calendar -->
 
-                        <table class="table-calendar" id="calendar" data-lang="en">
-                            <thead id="thead-month"></thead>
-                            <tbody id="calendar-body"></tbody>
-                        </table>
+            <div class="wrapper">
+                <div class="container-calendar">
+                    <h3 id="monthAndYear"></h3>
+                    <div class="button-container-calendar">
+                        <button id="previous" onclick="previous()">&#8249;</button>
+                        <button id="next" onclick="next()">&#8250;</button>
+                    </div>
 
-                        <div class="footer-container-calendar">
-                            <label for="month">Jump To: </label>
-                            <select id="month" onchange="jump()">
-                                <option value=0>Jan</option>
-                                <option value=1>Feb</option>
-                                <option value=2>Mar</option>
-                                <option value=3>Apr</option>
-                                <option value=4>May</option>
-                                <option value=5>Jun</option>
-                                <option value=6>Jul</option>
-                                <option value=7>Aug</option>
-                                <option value=8>Sep</option>
-                                <option value=9>Oct</option>
-                                <option value=10>Nov</option>
-                                <option value=11>Dec</option>
-                            </select>
-                            <select id="year" onchange="jump()"></select>
-                        </div>
+                    <table class="table-calendar" id="calendar" data-lang="en">
+                        <thead id="thead-month"></thead>
+                        <tbody id="calendar-body"></tbody>
+                    </table>
+
+                    <div class="footer-container-calendar">
+                        <label for="month">Jump To: </label>
+                        <select id="month" onchange="jump()">
+                                    <option value=0>Jan</option>
+                                    <option value=1>Feb</option>
+                                    <option value=2>Mar</option>
+                                    <option value=3>Apr</option>
+                                    <option value=4>May</option>
+                                    <option value=5>Jun</option>
+                                    <option value=6>Jul</option>
+                                    <option value=7>Aug</option>
+                                    <option value=8>Sep</option>
+                                    <option value=9>Oct</option>
+                                    <option value=10>Nov</option>
+                                    <option value=11>Dec</option>
+                                </select>
+                        <select id="year" onchange="jump()"></select>
                     </div>
                 </div>
-
-
             </div>
 
 
         </div>
+
+
     </div>
+
+
+
+
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 
