@@ -8,6 +8,7 @@
 
 body {
     background-color: white;
+    overflow-x: hidden;
 }
 
 main {
@@ -26,7 +27,7 @@ p {
 }
 
 nav {
-    background-color: white;
+    background-color: rgb(208, 208, 208);
     border-bottom: 1px solid #691a1b;
     padding-left: 20px;
     padding-right: 20px;
@@ -90,6 +91,50 @@ nav {
     margin: auto;
 }
 
+.gale {
+    margin-top: 20px;
+    display: flex;
+    height: 100vh;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    height: 400px;
+}
+
+.card-img-top {
+    width: 100px!important;
+    justify-self: center;
+    margin: auto;
+}
+
+.click {
+    display: flex;
+    width: 400px;
+    margin: auto;
+}
+
+.card-deck {
+    justify-content: center!important;
+    width: 100%;
+}
+
+
+/* footer */
+
+#footer {
+    background-color: #691a1b;
+}
+
+#navbarNav1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* end footer */
+
 
 /*Window size: tablet and phone*/
 
@@ -114,6 +159,10 @@ nav {
     }
     #carousel-img img {
         height: 50vh;
+    }
+    .gale {
+        display: grid;
+        justify-content: center;
     }
 }
 
@@ -140,4 +189,50 @@ nav {
 
 .Head {
     text-align: center;
+    margin-top: 30px;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 700px) {
+    .gale {
+        display: grid;
+        width: 100%;
+        justify-content: center;
+    }
+    .left {
+        justify-self: center;
+        width: 350px!important;
+        justify-content: center;
+        height: 200px;
+    }
+    .right {
+        justify-self: center;
+        width: 350px!important;
+        justify-content: center;
+    }
+    .card-body {
+        width: 100%;
+    }
+    .card-title {
+        font-size: 14px;
+    }
+    .Head {
+        font-size: 20px;
+    }
+    .card-body .btn {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        width: 100px;
+    }
+    .card-deck {
+        justify-content: center;
+    }
+    .click {
+        width: 300px;
+    }
+    .card {
+        width: 300px;
+        height: 200px;
+    }
 }
