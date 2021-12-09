@@ -95,12 +95,13 @@ nav {
     margin-top: 20px;
     display: flex;
     height: 100vh;
+    background-color: gray;
 }
 
 .card {
     padding: 10px;
     margin: 10px;
-    height: 400px;
+    height: 50vh!important;
 }
 
 .card-img-top {
