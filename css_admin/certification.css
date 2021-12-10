@@ -185,15 +185,14 @@ iframe {
 }
 
 @media only screen and (max-width: 799px) {
-    .cert {
+    .card-body {
         display: grid;
-    }
-    .certi {
-        width: 300px;
-        height: 200px;
-    }
-    .certi1 {
         width: auto;
-        font-size: 15px;
+    }
+    .cert {
+        width: 100px;
+    }
+    .certi1 span {
+        width: 200px;
     }
 }
