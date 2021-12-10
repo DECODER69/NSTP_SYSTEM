@@ -185,27 +185,25 @@ iframe {
 }
 
 @media only screen and (max-width: 799px) {
+    .card {
+        display: grid;
+        width: 100%;
+    }
     .card-body {
+        justify-self: center;
         display: grid;
         width: auto;
+        width: 100%;
     }
     .cert {
         width: 100px;
     }
-<<<<<<< HEAD
-    .certi1 span {
-        width: 200px;
-=======
     .certi1 {
         width: auto;
         font-size: 15px;
-    
-    
->>>>>>> 8841642f76ac50ce5dc7b642e8741b57aa0d0a35
     }
-
-    #cetificate {
-        font-size: 10px;
+    .certificate {
+        font-size: 25px!important;
+        font-weight: bolder;
     }
 }
-
