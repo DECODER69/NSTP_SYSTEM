@@ -48,6 +48,13 @@ a {
     color: black;
 }
 
+#message {
+    font-size: 15px;
+    color: black;
+    display: flex;
+    margin: auto;
+}
+
 #back {
     color: #691a1b;
     font-weight: bold;
@@ -62,6 +69,12 @@ a {
     display: flex;
     justify-content: center;
     gap: 5px;
+}
+
+.sub-button {
+    background-color: rgb(32, 193, 252);
+    height: 40px;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 1000px) {
