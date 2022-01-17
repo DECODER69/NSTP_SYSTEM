@@ -11,12 +11,8 @@ body {
     overflow-x: hidden;
 }
 
-main {
-    padding: 20px 20px 20px 20px;
-}
-
 h4 {
-    color: #691a1b;
+    color: #ffffff;
 }
 
 p {
@@ -27,7 +23,11 @@ p {
 }
 
 #carouselExampleIndicators {
-    height: 100vh;
+    height: 50vh!important;
+}
+
+.carousel-inner {
+    height: 50vh;
 }
 
 #carousel-img img {
@@ -35,15 +35,19 @@ p {
 }
 
 nav {
-    background-color: white;
+    background-color: rgb(32, 32, 32);
     border-bottom: 1px solid #691a1b;
     padding-left: 20px;
     padding-right: 20px;
     border-top: 10px solid#691a1b;
 }
 
+.navbar-nav {
+    border: solid 0.5px #b3b3b369;
+}
+
 #navbarNavAltMarkup li a {
-    color: #691a1b;
+    color: #ffffff;
     font-weight: bolder;
     font-style: normal;
 }
@@ -52,14 +56,20 @@ nav {
     color: #DF465A;
 }
 
+.dropdown-menu {
+    background-color: #691a1b;
+}
+
 #FAQS {
     margin-top: 10px;
     background: transparent;
 }
 
 #FAQS h1 {
-    color: #691a1b;
+    margin-top: 30px;
+    color: #000000;
     font-weight: bolder;
+    float: left;
 }
 
 #navbarNavAltMarkup a {
@@ -87,7 +97,7 @@ nav {
 }
 
 #signin-btn a {
-    color: #691a1b;
+    color: #ffffff;
 }
 
 #signin-btn:hover {
@@ -106,6 +116,7 @@ nav {
 
 #footer {
     background-color: #691a1b;
+    bottom: 0;
 }
 
 #rotc {
@@ -132,6 +143,64 @@ nav {
     justify-self: center;
 }
 
+.video {
+    height: 100vh;
+}
+
+.latestx {
+    height: 500px;
+    background-color: rgb(21, 21, 21);
+}
+
+.latestx #latest {
+    color: rgb(255, 255, 255);
+    padding: 30px;
+}
+
+.latesty {
+    display: none;
+}
+
+.card-deck {
+    padding: 30px;
+}
+
+.load {
+    clip-path: polygon(25% 0%, 100% 0, 100% 72%, 75% 100%, 0 100%, 0 25%);
+    width: 200px;
+    height: 60px;
+    font-weight: bolder;
+    background-color: rgb(21, 21, 21);
+    color: #ffffff;
+    border: solid 1px #ffffff82;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.loadm {
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+}
+
+.load:hover {
+    border: solid 1px #ffffff;
+    cursor: pointer;
+}
+
+
+/* .load:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 80px solid white;
+    border-left: 80px solid red;
+    width: 0;
+} */
+
 
 /*Window size: tablet and phone*/
 
@@ -154,8 +223,17 @@ nav {
     #carouselExampleIndicators {
         height: 50vh;
     }
-    #carousel-img img {
-        height: 50vh;
+    .carousel-inner {
+        height: 30vh;
+    }
+    #signin-btn a {
+        float: left;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .latestx {
+        height: 100vh;
     }
 }
 
@@ -169,5 +247,28 @@ nav {
     }
     nav {
         height: 200px;
+    }
+    .latestx {
+        height: 150vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .card-deck {
+        display: grid;
+        margin-top: auto;
+        height: 100vh;
+    }
+    .card-decks {
+        display: grid;
+        margin-top: auto;
+        height: 100vh;
+    }
+    .card {
+        display: block;
+        background-color: rgb(21, 21, 21);
+    }
+    .latestx {
+        height: 4000px;
     }
 }

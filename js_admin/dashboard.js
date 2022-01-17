@@ -1,33 +1,55 @@
 // upload 2
 function readURL(input) {
     if (input.files && input.files[0]) {
-  
-      var reader = new FileReader();
-  
-      reader.onload = function(e) {
-        $('.image-upload-wrap').hide();
-  
-        $('.file-upload-image').attr('src', e.target.result);
-        $('.file-upload-content').show();
-  
-        $('.image-title').html(input.files[0].name);
-      };
-  
-      reader.readAsDataURL(input.files[0]);
-  
+
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            $('.image-upload-wrap').hide();
+
+            $('.file-upload-image').attr('src', e.target.result);
+            $('.file-upload-content').show();
+
+            $('.image-title').html(input.files[0].name);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+
     } else {
-      removeUpload();
+        removeUpload();
     }
-  }
-  
-  
+}
+
+
+//   for submitting button
+let joinbtn = document.querySelector('#remove-image');
+
+// let message = document.querySelector('h1');
+
+joinbtn.addEventListener('click', () => {
+    joinbtn.innerText = 'Uploading...';
+
+    setTimeout(() => {
+
+        location.href = "../html-admin/dashboard.html";
+
+
+    }, 3000);
+
+
+
+});
+
+
 
 // upload
-{/* <script type="text/javascript">
-$(document).ready(function() 
-    $("input[type=file]").nicefileinput();
-);
-</script> */}
+{
+    /* <script type="text/javascript">
+    $(document).ready(function() 
+        $("input[type=file]").nicefileinput();
+    );
+    </script> */
+}
 
 
 

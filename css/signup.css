@@ -77,6 +77,11 @@ a {
     border-radius: 10px;
 }
 
+
+/* .submitbtn {
+    transform: skew(-20deg);
+} */
+
 @media only screen and (max-width: 1000px) {
     body {
         padding: 30px;

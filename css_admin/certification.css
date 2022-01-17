@@ -144,6 +144,53 @@ iframe {
     display: flex;
 }
 
+#canvas {
+    background-color: #691a1b;
+}
+
+.containerx {
+    background-color: #ffffff;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+}
+
+.containerx h1 {
+    color: #691a1b;
+    font-weight: bolder;
+    margin: auto;
+    display: flex;
+}
+
+#titlecert {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: auto;
+    display: flex;
+}
+
+#inputname {
+    margin-top: -100px;
+    margin: auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+#name {
+    margin-top: -100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+#download-btn {
+    margin-top: -100px;
+    margin: auto;
+    display: flex;
+}
+
 
 /*Window size: tablet and phone*/
 
