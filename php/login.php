@@ -1,39 +1,53 @@
 <?php
-$uname = filter_input(INPUT_POST, 'usernames');
-$pword = filter_input(INPUT_POST, 'passwords');
 
 
 
 $host = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbname = "webapp";
+$dbname = "nstp";
 
 // Create connection
 $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 
+if (isset($_POST['username']) && isset($_POST['password'])) {
+
+	function test_input($data) {
+	  $data = trim($data);
+	  $data = stripslashes($data);
+	  $data = htmlspecialchars($data);
+	  return $data;
+	}
+
+	$username = test_input($_POST['username']);
+	$password = test_input($_POST['password']);
 
 
+	if (empty($username)) {
+		echo"";
+	}else if (empty($password)) {
+		echo"";
+	}else {
 
-// Check connection
-if (mysqli_connect_error()){
-die('Connect Error ('. mysqli_connect_errno() .') '
-. mysqli_connect_error());
-}
+		// Hashing the password
+		$password = md5($password);
+        
+        $sql = "SELECT * FROM registration WHERE idnum='$username' AND password='$password'";
+        $result = mysqli_query($conn, $sql);
 
-else{
+        if (mysqli_num_rows($result) === 1) {
+        	// the user name must be unique
+        	$row = mysqli_fetch_assoc($result);
+        	
+        }else {
+        	header("Location: ../index.php?error=Incorect User name or password");
+        }
 
-$sql = "INSERT INTO login(user_name, password)
-                            values ('$uname','$pword')";
-if ($conn->query($sql)){
-echo "New record is inserted sucessfully";
-}
-else{
-echo "Error: ". $sql ."
-". $conn->error;
-}
-$conn->close();
-}
+	}
+	
+}else {
+	header("Location: ../index.php");
+
 
 
 ?>

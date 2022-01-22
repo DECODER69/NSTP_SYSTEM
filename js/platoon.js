@@ -1,17 +1,17 @@
-let joinbtn = document.querySelector('#joinbtns');
+function joining() {
+    var joinbtn = document.querySelector('.btns');
+    joinbtn.addEventListener('click', () => {
+        joinbtn.innerText = 'Joining Class...';
 
-// let message = document.querySelector('h1');
+        setTimeout(() => {
 
-joinbtn.addEventListener('click', () => {
-    joinbtn.innerText = 'Joining Class...';
-
-    setTimeout(() => {
-
-        location.href = "../html/alpha.html";
+            location.href = "../html/alpha.html";
 
 
-    }, 3000);
+        }, 3000);
 
 
 
-});
+    })
+
+}
