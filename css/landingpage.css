@@ -183,6 +183,8 @@ nav {
     font-size: 25px;
     text-align: center;
     margin: auto;
+    background-color: transparent;
+    border: none;
 }
 
 .load:hover {
@@ -249,7 +251,7 @@ nav {
         height: 200px;
     }
     .latestx {
-        height: 150vh;
+        height: 120vh;
     }
 }
 

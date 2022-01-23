@@ -72,9 +72,13 @@ a {
 }
 
 .sub-button {
-    background-color: rgb(32, 193, 252);
     height: 40px;
-    border-radius: 10px;
+    border: solid 1px rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    font-weight: bolder;
 }
 
 
