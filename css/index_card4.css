@@ -39,16 +39,9 @@ h2{
 	color:#000000;
 margin:1.5 0px;	
 }
-.left-column{
-float: left;
-width: 75%;	
-}
 
-.right-column{
- width: 25%;
- float: right;
- padding-left:20px;
-}
+
+
 .card{
 	padding: 20px;
 	background-color: #ffffff;
@@ -60,9 +53,6 @@ width: 75%;
 }
 
 
-.right-column .card img{
-	margin-bottom: 10px;
-}
 
 
 footer{
