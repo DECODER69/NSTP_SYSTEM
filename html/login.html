@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
-</head>
+
 
 <body>
 
@@ -31,7 +31,7 @@
             </div>
         </a>
         <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
+            <label for="exampleInputEmail1">ID Number</label>
             <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp">
 
         </div>
@@ -41,7 +41,7 @@
         </div>
 
 
-        
+
 
         <button type="submit" class="submitbtn btn btn-primary" id="submitbtn" disabled="disabled">Submit</button>
         <div class="signup"> Don't have an account yet? <a href="signup.html" id="back">signup</a> now.
@@ -49,16 +49,14 @@
     </div>
 
     <script>
-
         cards.addEventListener('input', () => {
             if (Email1.value.length > 0 &&
                 Password1.value.length > 0) {
-                    submitbtn.removeAttribute('disabled');
+                submitbtn.removeAttribute('disabled');
             } else {
                 submitbtn.setAttribute('disabled', 'disabled');
             }
         });
-
     </script>
 
     <!-- BOOTSTRAP BUNDLE -->
