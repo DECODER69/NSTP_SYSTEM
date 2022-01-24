@@ -80,12 +80,17 @@ WSGI_APPLICATION = 'NstpSystem.wsgi.application'
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'nstpsystem',
         'USER': 'admin',
         'PASSWORD': '',
         'HOST': 'localhost',
         
+=======
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+>>>>>>> db7afe168e6d0af4020469237ef6ab17cf4df33e
     }
 }
 
