@@ -1,9 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-<<<<<<< HEAD
 from .models import StudentsInformation  
-=======
->>>>>>> db7afe168e6d0af4020469237ef6ab17cf4df33e
 
 
 

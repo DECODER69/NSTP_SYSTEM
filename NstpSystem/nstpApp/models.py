@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-<<<<<<< HEAD
 class registration(models.Model):
     idnum = models.CharField(max_length=12, primary_key=True)
     lname = models.CharField(max_length=30)
@@ -27,5 +26,3 @@ class StudentsInformation(models.Model):
 class admin(models.Model):
     username = models.CharField(max_length=20)
     password = models.CharField(max_length=20)
-=======
->>>>>>> db7afe168e6d0af4020469237ef6ab17cf4df33e
