@@ -192,6 +192,15 @@ nav {
     cursor: pointer;
 }
 
+.indention ol {
+    margin-left: 70px;
+}
+
+.scrollspy-example h4 {
+    color: black;
+    margin-left: 40px;
+}
+
 
 /* .load:before {
     content: '';
