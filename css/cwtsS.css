@@ -1,5 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+.center {
+    text-align: center;
+}
+
+.btn_ctws {
+    margin: auto;
+    top: 50%;
+    margin-top: 30px;
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    padding: 1rem 1.75rem;
+    text-decoration: none;
+    width: 30%;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-43:hover {
+    background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+@media (min-width: 768px) {
+    .button-43 {
+        padding: 1rem 2rem;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -95,6 +130,10 @@ nav {
     margin-top: 20px;
     display: flex;
     height: 100vh;
+    border-style: solid;
+    padding: auto;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .card {
@@ -118,6 +157,7 @@ nav {
 .card-deck {
     justify-content: center!important;
     width: 100%;
+    margin: auto;
 }
 
 
@@ -139,6 +179,8 @@ nav {
 
 #footer {
     background-color: #691a1b;
+    margin-top: 80px;
+
 }
 
 #navbarNav1 {
@@ -177,6 +219,7 @@ nav {
     .gale {
         display: grid;
         justify-content: center;
+       
     }
 }
 
@@ -205,6 +248,7 @@ nav {
     margin-left: 30px;
     margin-top: 50px;
     font-weight: bolder;
+   
 }
 
 @media only screen and (max-width: 700px) {
@@ -212,6 +256,8 @@ nav {
         display: grid;
         width: 100%;
         justify-content: center;
+        margin: auto;
+       
     }
     .left {
         justify-self: center;
@@ -248,5 +294,13 @@ nav {
     .card {
         width: 300px;
         height: 200px;
+    }
+}
+
+@media(max-width:800px) {
+   
+    .btn_ctws {
+        width: 50%;
+        padding: 0px;
     }
 }
