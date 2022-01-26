@@ -130,6 +130,9 @@ nav {
     margin-top: 20px;
     display: flex;
     height: 100vh;
+    border-style: solid;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .card {
@@ -174,6 +177,7 @@ nav {
 
 #footer {
     background-color: #691a1b;
+    margin-top: 50px;
 }
 
 #navbarNav1 {
