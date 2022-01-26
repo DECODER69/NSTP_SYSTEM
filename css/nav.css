@@ -15,7 +15,7 @@ main {
 }
 
 h4 {
-    color: #691a1b;
+    color: #ffffff;
 }
 
 p {
@@ -25,17 +25,34 @@ p {
     padding-bottom: 20px;
 }
 
+#tup {
+    width: 100px!important;
+}
+
 nav {
-    background-color: white;
+    background-color: rgb(32, 32, 32);
     border-bottom: 1px solid #691a1b;
-    padding-left: 20px;
-    padding-right: 20px;
+    height: 120px!important;
+}
+
+.container-fluid {
+    height: 100px;
+    margin-top: 0px;
 }
 
 #navbarNavAltMarkup li a {
-    color: #691a1b;
+    color: #ffffff;
     font-weight: bolder;
     font-style: normal;
+    justify-content: center;
+    text-align: center;
+}
+
+#navbarNavAltMarkup form button {
+    display: flex;
+    margin: auto;
+    color: #ffffff;
+    background-color: #bb2c2cd7;
 }
 
 #navbarNavAltMarkup a:hover {
@@ -122,7 +139,7 @@ nav {
 
 @media only screen and (min-width: 1000px) {
     #navbarNavAltMarkup {
-        display: flex;
+        display: block;
         justify-content: flex-end;
     }
     nav {
