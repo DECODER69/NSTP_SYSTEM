@@ -15,7 +15,7 @@ main {
 }
 
 h4 {
-    color: #691a1b;
+    color: #ffffff;
 }
 
 p {
@@ -26,16 +26,15 @@ p {
 }
 
 nav {
-    background-color: white;
-    border-bottom: 1px solid #691a1b;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: rgb(32, 32, 32);
 }
 
 #navbarNavAltMarkup li a {
-    color: #691a1b;
+    color: #ffffff;
     font-weight: bolder;
     font-style: normal;
+    justify-content: center;
+    text-align: center;
 }
 
 #navbarNavAltMarkup a:hover {
@@ -86,18 +85,41 @@ nav {
 }
 
 #try1 {
+    margin: auto;
+    display: flex;
+}
+
+.card-header {
+    font-size: 30px!important;
+    font-weight: bolder;
+}
+
+iframe {
+    margin: auto;
+    display: flex;
+}
+
+#logo img {
+    width: 100px;
+    height: auto;
+}
+
+#navbarNavAltMarkup form button {
     display: flex;
     margin: auto;
+    color: #ffffff;
+    background-color: #bb2c2cd7;
+}
+
+.dropdown-menu {
+    background-color: rgb(32, 32, 32);
+    color: #ffffff;
 }
 
 
 /*Window size: tablet and phone*/
 
 @media only screen and (max-width: 1000px) {
-    nav,
-    main {
-        padding: 0 10px 0 10px;
-    }
     nav {
         position: fixed;
         top: 0;
@@ -115,6 +137,9 @@ nav {
     #carousel-img img {
         height: 50vh;
     }
+    nav {
+        height: auto;
+    }
 }
 
 
@@ -124,8 +149,5 @@ nav {
     #navbarNavAltMarkup {
         display: flex;
         justify-content: flex-end;
-    }
-    nav {
-        height: 200px;
     }
 }
