@@ -1,0 +1,574 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>platoon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="{% static 'css/platoon.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'activities/base.html' %}
+
+    <!-- cards -->
+
+
+    <div class="cards">
+        <div class="card-deck">
+            <div class="card">
+                <h id="title">A</h>
+                <div class="card-body">
+                    <h5 class="card-title">ALPHA</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                </div>
+                <!-- <button type="button" class="btns" id="joinbtns" onclick="joining()">Join Class</button> -->
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter1">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/alpha.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <h1></h1>
+            </div>
+            <div class="card">
+                <h id="title">B</h>
+                <div class="card-body">
+                    <h5 class="card-title">BRAVO</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+                </div>
+                <!-- <button type="button" class="btns" id="joinbtns" onclick="joining()"><a href="../html/bravo.html"></a>Join Class</button> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/bravo.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1></h1>
+            </div>
+            <div class="card">
+                <h id="title">C</h>
+                <div class="card-body">
+                    <h5 class="card-title">CHARLIE</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter3">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/charlie.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h id="title">D</h>
+                <div class="card-body">
+                    <h5 class="card-title">DELTA</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter4">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/delta.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="cards">
+        <div class="card-deck">
+            <div class="card">
+                <h id="title">E</h>
+                <div class="card-body">
+                    <h5 class="card-title">ECHO</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter5">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/echo.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h id="title">F</h>
+                <div class="card-body">
+                    <h5 class="card-title">FOXTROT</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter6">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/foxtrot.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h id="title">G</h>
+                <div class="card-body">
+                    <h5 class="card-title">GOLF</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter7">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/golf.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h id="title">H</h>
+                <div class="card-body">
+                    <h5 class="card-title">HOTEL</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter8">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/hotel.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+    </div>
+
+    <div class="cards">
+        <div class="card-deck">
+            <div class="card">
+                <h id="title">I</h>
+                <div class="card-body">
+                    <h5 class="card-title">INDIA</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter9">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter9" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/india.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h id="title">J</h>
+                <div class="card-body">
+                    <h5 class="card-title">JULIET</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter10">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter10" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/juliet.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h id="title">K</h>
+                <div class="card-body">
+                    <h5 class="card-title">KILO</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter11">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter11" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/kilo.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h id="title">L</h>
+                <div class="card-body">
+                    <h5 class="card-title">LIMA</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter12">
+                    Join Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter12" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Joining Class</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Student No:</label>
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="TUPC-XX-XXXX">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Password:</label>
+                                        <input type="password" class="form-control" id="recipient-name" placeholder="">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <a href="../html/lima.html"><button type="button" class="btn btn-primary">Join Class</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="{% static 'js/platoon.js' %}"></script>
+</body>
+
+</html>
