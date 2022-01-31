@@ -178,7 +178,4 @@ nav {
         display: flex;
         justify-content: flex-end;
     }
-    nav {
-        height: 200px;
-    }
 }

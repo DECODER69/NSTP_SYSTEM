@@ -26,13 +26,6 @@ p {
     padding-bottom: 20px;
 }
 
-nav {
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid #691a1b;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
 #navbarNavAltMarkup li a {
     color: #691a1b;
     font-weight: bolder;
@@ -187,9 +180,6 @@ nav {
     #navbarNavAltMarkup {
         display: flex;
         justify-content: flex-end;
-    }
-    nav {
-        height: 200px;
     }
 }
 

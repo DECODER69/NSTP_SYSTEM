@@ -181,7 +181,7 @@ def update(request, id):
         data.cert_status = request.POST['status']
         data.save()
         return redirect('/admincertificate')
-    else:
+    else:   
         return redirect('/admincertificate')
         
             

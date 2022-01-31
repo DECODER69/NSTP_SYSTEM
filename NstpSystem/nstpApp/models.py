@@ -1,5 +1,8 @@
 from django.db import models
-from django.conf import settings
+from datetime import datetime
+from django.utils import timezone
+
+now = timezone.now
 
 # Create your models here.
 class registration(models.Model):
@@ -14,8 +17,8 @@ class registration(models.Model):
     age = models.DecimalField(max_digits=3, decimal_places=0, null=False)
     bdate = models.CharField(max_length=15, null=False)
     password = models.CharField(max_length=20, null=False)
+    section = models.CharField(max_length=20, null=False)
     
     
-    
-
- 
+    def __str__(self):
+        return self.idnum

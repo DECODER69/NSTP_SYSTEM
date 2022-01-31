@@ -1,3 +1,5 @@
+from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
 from pyexpat.errors import messages
 from django.shortcuts import redirect, render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -10,39 +12,35 @@ from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required, permission_required
 import mysql.connector as sql
 
-idnum=''
-password=''
-
-
-
 # Create your views here.
 
 
-def index(request):
-    user_list = registration.objects.order_by('idnum')
-    context = {'user_list': user_list}
-    return render(request, 'activities/index.html')
 
+def index(request):
+    return render(request, 'html/index.html')
+def navbar(request):
+    return render(request, 'base.html')
 
 def login(request):
-    return render(request, 'activities/login.html')
+    return render(request, 'templates/html/login.html')
 def register(request):
-    return render(request, 'activities/signup.html')
+    return render(request, 'html/signup.html')
 
-def navbar(request):
-    return render(request, 'activities/base.html')
 def rotclist(request):
-    return render(request, 'activities/rotclist.html')
+    return render(request, 'html/rotclist.html')
 def cwtslist(request):
-    return render(request, 'activities/cwtslist.html')
+    return render(request, 'html/cwtslist.html')
 def dashboard(request):
-    return render(request, 'activities/Dashboard.html')
+    return render(request, 'html/Dashboard.html')
 def platoon(request):
-    return render(request, 'activities/Platoon.html')
+    return render(request, 'html/Platoon.html')
 def cwts(request):
-    return render(request, 'activities/Cwts.html')
+    return render(request, 'html/Cwts.html')
 def certification(request):
-    return render(request, 'activities/Certification.html')
+    return render(request, 'html/Certification.html')
+
+
+
 
 def registerprocess(request):
     if request.method == 'POST':
@@ -61,7 +59,7 @@ def registerprocess(request):
         
         try:
             n = registration.objects.get(idnum=idnumber)
-            return render(request, 'activities/signup.html', {'error_message': 'ID Number already exists: ' + idnumber})
+            return render(request, 'html/signup.html', {'error_message': 'ID Number already exists: ' + idnumber})
         
         except ObjectDoesNotExist:
             user = registration.objects.create(idnum=idnumber, lname=lname, fname=fname, minitial=minitial, address=address, cpnumber=cpnumber, email=email, gender=gender,
@@ -70,7 +68,6 @@ def registerprocess(request):
             return HttpResponseRedirect('/register')
         
 def userlogin(request):
-    global em,pwd
     if request.method=="POST":
         m=sql.connect(host="localhost",user="admin",password="",database='nstpsystem')
         cursor=m.cursor()
@@ -85,13 +82,11 @@ def userlogin(request):
         cursor.execute(c)
         t=tuple(cursor.fetchall())
         if t==():
-            return render(request, 'activities/login.html')
+            return render(request,'html/login.html')
             
         else:
-            return render(request, 'activities/Dashboard.html')
+            return render(request, 'html/Dashboard.html')
 
-    return render(request, 'activities/login.html')
-  
-            
-    
+    return render(request, 'html/login.html')
+
 

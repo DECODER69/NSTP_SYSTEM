@@ -1,13 +1,13 @@
 from django.urls import path
-from . import views
-from django.conf.urls import static
 from django.conf import settings
+from . import views
 
 
-app_name = 'activities'
+app_name = 'nstpapp'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('navbar/', views.navbar, name='navbar'),
     path('login/', views.login, name='login'),
     path('register/', views.register, name='register'),
     path('registerprocess/', views.registerprocess, name='registerprocess'),
@@ -20,5 +20,4 @@ urlpatterns = [
     path('cwts/', views.cwts, name='cwts'),
     path('certification/', views.certification, name='certification'),
 
-   
 ]

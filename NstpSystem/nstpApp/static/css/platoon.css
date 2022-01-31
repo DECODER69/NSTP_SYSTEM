@@ -25,6 +25,13 @@ p {
     padding-bottom: 20px;
 }
 
+nav {
+    background-color: white;
+    border-bottom: 1px solid #691a1b;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 #navbarNavAltMarkup li a {
     color: #691a1b;
     font-weight: bolder;
@@ -110,7 +117,8 @@ iframe {
 }
 
 .card {
-    border: #691a1b solid 1px;
+    border: solid 1px rgb(53, 6, 6)!important;
+    height: 500px !important;
 }
 
 #title {
