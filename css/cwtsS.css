@@ -168,10 +168,15 @@ nav {
     margin: auto;
     padding: 20px;
     background-color: #353535;
+
 }
 
 .carou {
     margin: 40px;
+}
+
+.carousel-inner{
+    height: auto;
 }
 
 
@@ -192,49 +197,6 @@ nav {
 /* end footer */
 
 
-/*Window size: tablet and phone*/
-
-@media only screen and (max-width: 1000px) {
-    nav,
-    main {
-        padding: 0 10px 0 10px;
-    }
-    nav {
-        position: fixed;
-        top: 0;
-    }
-    #logo img {
-        width: 60px;
-        height: auto;
-    }
-    .label h4 {
-        font-size: 15px;
-    }
-    #carouselExampleIndicators {
-        height: 50vh;
-    }
-    #carousel-img img {
-        height: 50vh;
-    }
-    .gale {
-        display: grid;
-        justify-content: center;
-       
-    }
-}
-
-
-/*Window size: full screen or Computer*/
-
-@media only screen and (min-width: 1000px) {
-    #navbarNavAltMarkup {
-        display: flex;
-        justify-content: flex-end;
-    }
-    nav {
-        height: 200px;
-    }
-}
 
 .tableCon {
     margin-top: 30px;
@@ -249,6 +211,9 @@ nav {
     margin-top: 50px;
     font-weight: bolder;
    
+}
+.carousel-inner img{
+    height: 600px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -272,6 +237,7 @@ nav {
     }
     .card-body {
         width: 100%;
+        
     }
     .card-title {
         font-size: 14px;
@@ -302,5 +268,63 @@ nav {
     .btn_ctws {
         width: 50%;
         padding: 0px;
+        
+    }
+    .gale{
+        height: 750px;
+    }
+
+    .carousel-inner img{
+        height: auto;
+        width: auto;
+    }
+
+  
+}
+
+/*Window size: tablet and phone*/
+
+@media only screen and (max-width: 1000px) {
+    nav,
+    main {
+        padding: 0 10px 0 10px;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+    }
+    #logo img {
+        width: 60px;
+        height: auto;
+    }
+    .label h4 {
+        font-size: 15px;
+    }
+    #carouselExampleIndicators {
+        height: 50vh;
+        
+    }
+   
+
+    #carousel-img img {
+        height: 50vh;
+    }
+    .gale {
+        display: grid;
+        justify-content: center;
+       
+    }
+}
+
+
+/*Window size: full screen or Computer*/
+
+@media only screen and (min-width: 1000px) {
+    #navbarNavAltMarkup {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav {
+        height: 200px;
     }
 }
