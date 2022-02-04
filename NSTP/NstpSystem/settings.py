@@ -84,8 +84,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'nstpsystem',
-        'USER': 'admin',
-        'PASSWORD': '',
+        'USER': 'root',
+        # 'PASSWORD': '',
         'HOST': 'localhost',
         'OPTIONS':{
             'sql_mode': 'traditional',
