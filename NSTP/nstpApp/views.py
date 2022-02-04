@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import context
 from .models import registration
 from .models import certifications
+from .models import platoons
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.conf import settings
@@ -66,6 +67,13 @@ def admincertificate(request):
 
 def navadmin(request):
     return render(request, 'activities/NavAdmin.html')
+
+def d_alpha(request):
+    alpha_display = platoons.objects.all()
+    return render(request, 'activities/adminalpha.html', {'alpha_display': alpha_display})
+
+
+
 
 
 
@@ -135,6 +143,7 @@ def cert(request):
         cert_course = request.POST.get('cert_course')
         cert_datereq = request.POST.get('cert_datereq')
         cert_document = request.POST.get('cert_document')
+
         certificate = certifications.objects.create(cert_email=cert_email, cert_fullname=cert_fullname, cert_course=cert_course, cert_datereq=cert_datereq, cert_document=cert_document)
         certificate.save()
         return redirect('/certification')
@@ -176,20 +185,29 @@ def delete(request, id):
 
 
 def update(request, id):
-    if request.method == 'POST':
-        data = certifications.objects.get(id=id)
-        data.cert_status = request.POST['status']
-        data.save()
-        return redirect('/admincertificate')
-    else:   
-        return redirect('/admincertificate')
+    pass
+    
         
             
     
 
 
 
+#platoon uploads
 
+def alpha(request):
+    if request.method == 'POST':    
+        # alpha_display = platoons.objects.all()
+        alpha_file = request.FILES["document"]
+        file = platoons.objects.create(alpha=alpha_file)
+        file.save()
+        print("error")
+        return redirect('/d_alpha')
+        # return render(request, 'activities/adminalpha.html', {'alpha_display': alpha_display})
+    else:
+        print("error2")
+        return redirect('/d_alpha')
+        
 
 
 

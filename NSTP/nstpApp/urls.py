@@ -1,11 +1,13 @@
 from django.urls import path
 from . import views
 from django.conf.urls import static
+from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include, path
 from django.contrib import admin
 
 from django.urls import include, re_path
+
 
 
 app_name = 'activities'
@@ -32,8 +34,27 @@ urlpatterns = [
     path('logout_user', views.logout_user, name='logout_user'),
     path('delete/<str:id>', views.delete, name='delete'),
     path('update/', views.update, name='update'),
+    path('d_alpha/', views.d_alpha, name='d_alpha'),
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # platoons uploads
+    path('alpha/', views.alpha, name='alpha'),
     # re_path(r'^delete/', views.delete, name='delete'),
     # path('updatestatus', views.updatestatus, name='updatestatus'),
 
    
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
