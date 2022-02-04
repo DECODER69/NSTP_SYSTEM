@@ -43,9 +43,30 @@ class certifications(models.Model):
     cert_course = models.CharField(max_length=20 )
     cert_datereq = models.CharField(max_length=20 )
     cert_document = models.CharField(max_length=20 )
-    cert_status = models.CharField(max_length=20, choices=STATUS, default='PENDING')
+    cert_status = models.CharField(max_length=20, choices=STATUS, default='Pending')
     
     def __str__(self):
         return self.cert_email
+    
+    
+    
+# platons
+
+class platoons(models.Model):
+    alpha = models.FileField()
+    bravo = models.CharField(max_length=200)
+    charlie = models.CharField(max_length=200)
+    delta = models.CharField(max_length=200)
+    echo = models.CharField(max_length=200)
+    foxtrot = models.CharField(max_length=200)
+    golf = models.CharField(max_length=20)
+    hotel = models.CharField(max_length=20)
+    india = models.CharField(max_length=20)
+    juliet = models.CharField(max_length=20)
+    kilo = models.CharField(max_length=20)
+    lima = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return self.alpha
     
     

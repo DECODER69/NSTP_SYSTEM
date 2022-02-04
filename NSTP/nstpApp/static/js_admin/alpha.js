@@ -10,7 +10,7 @@ function readURL(input) {
             var reader = new FileReader();
             reader.onload = function(e) {
                 if (extension == 'pdf') {
-                    $(input).closest('.fileUpload').find(".icon").attr('src', '../image/file-eamark.svg');
+                    $(input).closest('.fileUpload').find(".icon").attr('src', 'image/pdf.png');
                 } else if (extension == 'docx') {
                     $(input).closest('.fileUpload').find(".icon").attr('src=', 'https://image.flaticon.com/icons/svg/281/281760.svg');
                 } else if (extension == 'rtf') {
