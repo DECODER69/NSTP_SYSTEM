@@ -15,6 +15,8 @@ app_name = 'activities'
 urlpatterns = [
     path('', views.index, name='index'),
     path('login/', views.login, name='login'),
+    path('adminlogin/', views.adminlogin, name='adminlogin'),
+    path('admin', views.admin, name='admin'),
     path('register/', views.register, name='register'),
     path('registerprocess/', views.registerprocess, name='registerprocess'),
     path('userlogin/', views.userlogin, name='userlogin'),
@@ -32,7 +34,7 @@ urlpatterns = [
     path('navadmin', views.navadmin, name='navadmin'),
     path('logout_user', views.logout_user, name='logout_user'),
     path('delete/<str:id>', views.delete, name='delete'),
-    path('update/<str:id>', views.update, name='update'),
+    path('update/', views.update, name='update'),
     path('admindashboard/', views.admindashboard, name='admindashboard'),
     
     path('updateform/', views.updateform, name='updateform'),

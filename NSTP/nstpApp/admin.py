@@ -1,6 +1,22 @@
+from tabnanny import verbose
 from django.contrib import admin
 from .models import  registration, certifications, alphamodel, bravomodel, charliemodel, deltamodel, echomodel, foxtrotmodel, golfmodel, hotelmodel, indiamodel, julietmodel, kilomodel, limamodel
 
+
+
+# class registrationInline(admin.StackedInline):
+#     model = registration
+#     can_delete = False
+#     verbose_name_plural = 'registration'
+    
+    
+# class CustomizedUserAdmin (UserAdmin):
+#     inlines=(registrationInline,)
+    
+    
+    
+# admin.site.unregister(User)
+# admin.site.register(User, CustomizedUserAdmin)
 # Register your models here.
 
 admin.site.register(registration)

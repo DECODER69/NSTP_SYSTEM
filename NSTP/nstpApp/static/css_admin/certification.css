@@ -187,16 +187,25 @@ iframe {
 .update {
     padding: 4px;
     margin-right: 4px;
-    background-color: #ca9409;
+    background-color: #00a05b;
     color: #ffffff;
 }
 
 .delete {
+    text-decoration: none;
     padding: 4px;
     margin-left: 2px;
     background-color: #8c000e;
     color: #ffffff;
-    height: 50px;
+}
+
+.delete a {
+    color: #ffffff;
+}
+
+.approved {
+    background-color: #00a05b;
+    color: #ffffff;
 }
 
 

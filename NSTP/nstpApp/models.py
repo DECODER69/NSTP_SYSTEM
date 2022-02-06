@@ -1,14 +1,17 @@
+import email
 from django.db import models
 from django.conf import settings
+from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
 
 
 
 class registration(models.Model):
+
     field_rotc = 0
     field_cwts = 1
     field_choices = [(field_rotc, 'ROTC'), (field_cwts, 'CWTS')]
-    idnum = models.CharField(max_length=12, primary_key=True)
+    idnum = models.CharField(max_length=12, null=True, default='')
     lname = models.CharField(max_length=20, default='')
     fname = models.CharField(max_length=30, default='')
     minitial = models.CharField(max_length=1, default='')
@@ -26,18 +29,17 @@ class registration(models.Model):
         return self.idnum
     
 
-    
 class certifications(models.Model):
     STATUS = (
-        ('PENDING', 'PENDING '),
-        ('APPROVED', 'APPROVED'),
+        ("PENDING", "PENDING"),
+        ("APPROVED", "APPROVED"),
         )
     cert_email = models.EmailField(max_length=254, null=True)
     cert_fullname = models.CharField(max_length=100)
     cert_course = models.CharField(max_length=20 )
     cert_datereq = models.CharField(max_length=20 )
     cert_document = models.CharField(max_length=20 )
-    cert_status = models.CharField(max_length=20, choices=STATUS, null=False, default='PENDING')
+    cert_status = models.CharField(max_length=20, choices=STATUS, default='PENDING')
     
     def __str__(self):
         return self.cert_email
@@ -122,3 +124,5 @@ class limamodel(models.Model):
     pdf= models.FileField(upload_to='pdf/')
     def __str__(self):
         return self.name
+    
+

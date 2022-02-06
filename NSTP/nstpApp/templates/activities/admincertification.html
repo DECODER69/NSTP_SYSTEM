@@ -27,52 +27,55 @@
             <div class="col-12">
 
                 <!-- Table -->
-                <form action="#" method="POST">
-                    {% csrf_token %}
-
-                    <br>
 
 
-                    <table class="table1 table table-striped " id="myTable" data-filter-control="true" data-show-search-clear-button="true">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">EMAIL</th>
-                                <th scope="col">FULLNAME</th>
-                                <th scope="col">COURSE</th>
-                                <th scope="col">REQUESTED DOCUMENT</th>
-                                <th scope="col">STATUS</th>
-
-                                <th scope="col" class="text-center">ACTION</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for k in request1 %}
-                            <tr>
-                                <th scope="row">{{k.cert_email}}</th>
-                                <td>{{k.cert_fullname}}</td>
-                                <td>{{k.cert_course}}</td>
-                                <td>{{k.cert_document}}</td>
-                                <td>{{k.cert_status}}</td>
+                <br>
 
 
-                                {% comment %}
+                <table class="table1 table table-striped " id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">EMAIL</th>
+                            <th scope="col">FULLNAME</th>
+                            <th scope="col">COURSE</th>
+                            <th scope="col">REQUESTED DOCUMENT</th>
+                            <th scope="col">STATUS</th>
+
+                            <th scope="col" class="text-center">ACTION</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for k in request1 %}
+                        <tr>
+                            <th scope="row">{{k.cert_email}}</th>
+                            <td>{{k.cert_fullname}}</td>
+                            <td>{{k.cert_course}}</td>
+                            <td>{{k.cert_document}}</td>
+                            <form action="{% url 'activities:update' %}" method="post">
+                                {% csrf_token %}
+
                                 <td>
                                     <select name="status">
-                                <option>DECLINED</option>
-                                <option>APPROVED</option>
-                            </select></td> {% endcomment %}
+                                <option value="{{k.cert_status}}" disabled selected>{{k.cert_status}}</option>
+                                <option value="PENDING">PENDING</option>
+                                <option value="APPROVED">APPROVED</option>
+                            </select></td>
+
+                                <td><input type="hidden" name="getID" value="{{k.id}}"><button class="update" type="submit">Update</button>
+                                    <button class="delete"><a href="{% url 'activities:delete' k.id %}" style="text-decoration: none;" name="delete">Delete</a></button>
+                                </td>
+                            </form>
+                        </tr>
+
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
+                <hr>
 
 
-                                <td><a href="{% url 'activities:update' k.id%}" class="update" name="update" type="submit">Update</a><a href="{% url 'activities:delete' k.id %}" class="delete" name="delete">Delete</a></td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-
-                    </table>
-                    <hr>
-
-                </form>
             </div>
 
 

@@ -52,6 +52,8 @@ def dashboard(request):
 def requested(request):
     requests = certifications.objects.all()
     return render(request, 'activities/certification.html', {'requests': requests})
+
+@login_required(login_url='/login')
 def platoon(request):
     return render(request, 'activities/Platoon.html')
 def cwts(request):
@@ -121,6 +123,9 @@ def student_lima(request):
 
 
 #                   admin
+def adminlogin(request):
+    return render(request, 'activities/login-admin.html')
+
 def admindashboard(request):
     return render(request, 'activities/admindashboard.html')
 
@@ -194,17 +199,26 @@ def updateform(request):
 
 
     
-
+@login_required(login_url='/login/')
 def registerprocess(request):
     if request.method == 'POST':
-        last_name = request.POST['last_name']
-        first_name = request.POST['first_name']
-        email = request.POST['email']
-        password = request.POST['password']
-        username=request.POST['username']
-        
-        user = User.objects.create(last_name=last_name, first_name=first_name, email=email, password=password, username=username)
-        user.save()
+        idnum=request.POST['idnum']
+        lname=request.POST.get('last_name')
+        fname=request.POST.get('first_name')
+        minitial=request.POST.get('middle')
+        address=request.POST.get('address')
+        cpnumber=request.POST.get('contact')
+        email=request.POST.get('email')
+        gender=request.POST.get('gender')
+        age=request.POST.get('age')
+        bdate=request.POST.get('birthday')
+        password=request.POST.get('password')
+        section=request.POST.get('section')
+        field=request.POST.get('field')
+
+        create = registration.objects.create(idnum=idnum, lname=lname, fname=fname, minitial=minitial, address=address, cpnumber=cpnumber, email=email, gender=gender, age=age, bdate=bdate, 
+password=password, section=section, field=field)
+        create.save()
         return render(request, 'activities/login.html')
     else:
         return render(request, 'activities/signup.html')
@@ -233,19 +247,47 @@ def userlogin(request):
 
     return render(request, 'activities/login.html')
 
+
+
+#       ADMIN LOGIN
+
 # def userlogin(request):
-#     if request.method == "POST":
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-#         user = authenticate(request, username=username, password=password)
-#         if user is not None:
-#             login(request, user)
-#             return render(request, 'activities/Dashboard.html')
-#         else:
+#     if request.method=="POST":
+#         m=sql.connect(host="localhost",user="root",password="",database='nstpsystem')
+#         cursor=m.cursor()
+#         d=request.POST
+#         for key,value in d.items():
+#             if key=="username":
+#                 idnum=value
+#             if key=="password":
+#                 password=value
+        
+#         c="select * from User where idnum='{}' and password='{}'".format(idnum,password)
+        
+#         cursor.execute(c)
+#         t=tuple(cursor.fetchall())
+#         if t==():
 #             return render(request, 'activities/login.html')
+            
+#         else:
+#             name = registration.objects.filter(idnum=idnum)
+#             return render(request, 'activities/Dashboard.html', {'name': name})
+
+#     return render(request, 'activities/login.html')
+
+def admin(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = auth.authenticate(username=username, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/admindashboard')
+        else:
+            return redirect('/adminlogin')
        
-#     else:
-#         return render(request, 'activities/Dashboard.html')
+    else:
+        return redirect('/adminlogin')
             
 
 
@@ -297,18 +339,13 @@ def delete(request, id):
 
 
 
-def update(request, id):
-    data = certifications.objects.get(id=id)
-    form = certificationsForm( instance=data)
-    if request.method == "POST":
-        form=certificationsForm(request.POST, instance=data)
-        if form.is_valid():
-            form.save()
-            return redirect('/updateform')
-    
-    context={'form':form}
-   
-    return redirect('/admincertificate', context)
+def update(request):
+    stat1 = request.POST.get('status')
+    stat2 = request.POST.get('getID')
+    certifications.objects.filter(id=stat2).update(cert_status=stat1)
+    print(stat1, stat2)
+    return redirect('/admincertificate')
+
 
 
 # def update(request, id):
