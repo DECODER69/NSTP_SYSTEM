@@ -35,15 +35,15 @@ class registration(models.Model):
     
 class certifications(models.Model):
     STATUS = (
-        ("Pending", "PENDING" ),
-        ("Approved", "APPROVED"),
+        ('PENDING', 'PENDING '),
+        ('APPROVED', 'APPROVED'),
         )
     cert_email = models.EmailField(max_length=254, null=True)
     cert_fullname = models.CharField(max_length=100)
     cert_course = models.CharField(max_length=20 )
     cert_datereq = models.CharField(max_length=20 )
     cert_document = models.CharField(max_length=20 )
-    cert_status = models.CharField(max_length=20, choices=STATUS, default='Pending')
+    cert_status = models.CharField(max_length=20, choices=STATUS, null=False, default='PENDING')
     
     def __str__(self):
         return self.cert_email
@@ -52,21 +52,83 @@ class certifications(models.Model):
     
 # platons
 
-class platoons(models.Model):
-    alpha = models.FileField()
-    bravo = models.CharField(max_length=200)
-    charlie = models.CharField(max_length=200)
-    delta = models.CharField(max_length=200)
-    echo = models.CharField(max_length=200)
-    foxtrot = models.CharField(max_length=200)
-    golf = models.CharField(max_length=20)
-    hotel = models.CharField(max_length=20)
-    india = models.CharField(max_length=20)
-    juliet = models.CharField(max_length=20)
-    kilo = models.CharField(max_length=20)
-    lima = models.CharField(max_length=20)
-    
+class alphamodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
     def __str__(self):
-        return self.alpha
+        return self.name
+    
+class bravomodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+class charliemodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+    
+class deltamodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+
+class echomodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+class foxtrotmodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+    
+class golfmodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+    
+class hotelmodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+    
+class indiamodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+class julietmodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+    
+class kilomodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+class limamodel(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+
     
     

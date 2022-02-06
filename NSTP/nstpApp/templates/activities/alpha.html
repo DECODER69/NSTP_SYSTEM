@@ -19,59 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" id="logo" href="#">
-                <img src="../image/tup.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            </a>
-            <!-- eto footer -->
-            <div class="label">
-                <h4>Technological University of the Philippines</h4>
-                <h4 id="try1">National Service Training Program</h4>
-            </div>
-            <!-- hanggang dito -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="hamburger">
-                <i class="bi bi-list"></i>
-                
-          </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <!-- sa loob ng footer -->
-                    <ul class="navbar-nav" id="cyrine">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../html/Dashboard.html">Dashboard</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                              People
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../html/People(rotc list).html">ROTC List</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../html/People(cwts list).html">CWTS List</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/Platoon.html">Platoon Selection</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/Cwts.html">CWTS Section</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/certification.html">Certification</a>
-                        </li>
-
-                    </ul>
-                    <!-- hanggang dito -->
-                    <form class="d-flex">
-                        <button class="btn btn-outline-success" id="signin-btn" type="submit">Logout</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+    {% include 'activities/base.html' %} 
 
 
     <!-- cards -->
@@ -108,41 +56,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for file in alpha_display %}
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Topic 1</td>
+                            <th scope="row">{{file.id}}</th>
+                            <td>{{file.alpha}}</td>
 
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Topic 2</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Topic 3</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Topic 4</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Topic 5</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Topic 6</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">7</th>
-                            <td>Topic 7</td>
-
-                        </tr>
+                        {% endfor %}
+              
                     </tbody>
                 </table>
 
