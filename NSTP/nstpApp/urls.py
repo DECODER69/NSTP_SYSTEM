@@ -33,6 +33,7 @@ urlpatterns = [
     path('logout_user', views.logout_user, name='logout_user'),
     path('delete/<str:id>', views.delete, name='delete'),
     path('update/<str:id>', views.update, name='update'),
+    path('admindashboard/', views.admindashboard, name='admindashboard'),
     
     path('updateform/', views.updateform, name='updateform'),
     
