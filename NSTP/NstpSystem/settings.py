@@ -86,12 +86,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'nstpsystem',
         'USER': 'root',
-        # 'PASSWORD': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
-        'OPTIONS':{
-            'sql_mode': 'traditional',
-        }
-        
+
     }
 }
 

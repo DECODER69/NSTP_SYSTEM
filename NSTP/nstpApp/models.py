@@ -122,4 +122,29 @@ class limamodel(models.Model):
     pdf= models.FileField(upload_to='pdf/')
     def __str__(self):
         return self.name
+<<<<<<< HEAD
+=======
+    
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class Sample(models.Model):
+    name= models.CharField(max_length=20)
+    def __str__(self):
+        return self.name
+=======
+>>>>>>> 89540d0ac75056c78e43f8847d1f27fa28812862
+class sample(models.Model):
+    name= models.CharField(max_length=20)
+    def __str__(self):
+        return self.name
+>>>>>>> 121f5b892d394a5048b41a99459d1d3baf1bf761
+    
+    
+
+    
+>>>>>>> 7405b29fa2c8163a52ea2e12c6772c8897192fba
     
