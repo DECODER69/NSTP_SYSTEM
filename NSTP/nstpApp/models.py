@@ -130,5 +130,9 @@ class limamodel(models.Model):
         return self.name
     
 
+class Sample(models.Model):
+    name= models.CharField(max_length=20)
+    def __str__(self):
+        return self.name
     
     
