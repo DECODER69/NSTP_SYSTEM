@@ -121,6 +121,9 @@ def student_lima(request):
 
 
 #                   admin
+def admindashboard(request):
+    return render(request, 'activities/admindashboard.html')
+
 def admincertificate(request):
     request1 = certifications.objects.all()
     return render(request, 'activities/admincertification.html', {'request1': request1})
