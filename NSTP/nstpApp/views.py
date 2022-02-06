@@ -68,7 +68,7 @@ def certification(request):
 #                   STUDENT PLATOON DISPLAY
 
 def student_alpha(request):
-    alpha_display = alpha.objects.all()
+    alpha_display = alphamodel.objects.all()
     return render(request, 'activities/alpha.html', {'alpha_display': alpha_display})
 
 def student_bravo(request):

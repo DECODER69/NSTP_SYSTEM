@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> {% load static %}
 <html lang="en">
 
 <head>
@@ -12,14 +12,14 @@
 
 
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <link rel="stylesheet" href="../css/alpha.css">
+    <link rel="stylesheet" href="{% static 'css/alpha.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    {% include 'activities/base.html' %} 
+    {% include 'activities/base.html' %}
 
 
     <!-- cards -->
@@ -31,8 +31,10 @@
             <h5 class="card-title">What is Alpha Company</h5>
             <p class="card-text">Alpha Company, 2nd Battalion, 10th Infantry Regiment conducts Basic Combat Training (BCT) in order to provide physically fit, disciplined, motivated Soldiers who understand the Army Values, are instilled with the warrior ethos, and can immediately
                 contribute to their first unit of assignment.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+
         </div>
+        <br>
+        <h5 class="card-title">TOPICS</h5>
 
     </div>
 
@@ -50,20 +52,25 @@
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
+
                             <th scope="col">Filename</th>
+                            <th scope="col" class="dl">Download</th>
 
                         </tr>
                     </thead>
                     <tbody>
                         {% for file in alpha_display %}
                         <tr>
-                            <th scope="row">{{file.id}}</th>
-                            <td>{{file.alpha}}</td>
+                            <td>{{file.name}}</td>
+
+                            <td>{% if file.pdf %}
+                                <button class="pdf"><a style="text-decoration:none" href="{{file.pdf.url}}" target="__blank">DOWNLOAD</a></button> {% endif %}
+
+                            </td>
 
                         </tr>
                         {% endfor %}
-              
+
                     </tbody>
                 </table>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> {% load static %}
 <html lang="en">
 
 <head>
@@ -12,76 +12,29 @@
 
 
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <link rel="stylesheet" href="../css/charlie.css">
+    <link rel="stylesheet" href="{% static 'css/alpha.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" id="logo" href="#">
-                <img src="../image/tup.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            </a>
-            <!-- eto footer -->
-            <div class="label">
-                <h4>Technological University of the Philippines</h4>
-                <h4 id="try1">National Service Training Program</h4>
-            </div>
-            <!-- hanggang dito -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="hamburger">
-            <i class="bi bi-list"></i>
-            
-      </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <!-- sa loob ng footer -->
-                    <ul class="navbar-nav" id="cyrine">
+    {% include 'activities/base.html' %}
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../html/Dashboard.html">Dashboard</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                          People
-                        </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../html/People(rotc list).html">ROTC List</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../html/People(cwts list).html">CWTS List</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/Platoon.html">Platoon Selection</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/Cwts.html">CWTS Section</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/certification.html">Certification</a>
-                        </li>
 
-                    </ul>
-                    <!-- hanggang dito -->
-                    <form class="d-flex">
-                        <button class="btn btn-outline-success" id="signin-btn" type="submit">Logout</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
     <!-- cards -->
     <div class="card text-center">
         <div class="card-header">
             CHARLIE COMPANY
         </div>
         <div class="card-body">
-            <h5 class="card-title">What is Charlie Company</h5>
-            <p class="card-text">Charlie Company is a halfway house for Vietnam War veterans located on a farm north of Ventura, California, roughly 40 miles from Los Angeles. The facility is operated by retired Colonel Gordon Scales. It houses 24 resident inmates at a time,
-                thirty to forty per year, all veterans of Vietnam combat.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">What is Alpha Company</h5>
+            <p class="card-text">Alpha Company, 2nd Battalion, 10th Infantry Regiment conducts Basic Combat Training (BCT) in order to provide physically fit, disciplined, motivated Soldiers who understand the Army Values, are instilled with the warrior ethos, and can immediately
+                contribute to their first unit of assignment.</p>
+
         </div>
+        <br>
+        <h5 class="card-title">TOPICS</h5>
 
     </div>
 
@@ -99,47 +52,28 @@
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
+
                             <th scope="col">Filename</th>
+                            <th scope="col" class="dl">Download</th>
 
                         </tr>
                     </thead>
                     <tbody>
+                        {% for file in charlie_display %}
+
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Topic 1</td>
+
+                            <td>{{file.name}}</td>
+
+                            <td>{% if file.pdf %}
+                                <button class="pdf"><a style="text-decoration:none" href="{{file.pdf.url}}" target="__blank">DOWNLOAD</a></button> {% endif %}
+
+                            </td>
+
 
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Topic 2</td>
+                        {% endfor %}
 
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Topic 3</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Topic 4</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Topic 5</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Topic 6</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">7</th>
-                            <td>Topic 7</td>
-
-                        </tr>
                     </tbody>
                 </table>
 
