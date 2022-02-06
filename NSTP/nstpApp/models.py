@@ -130,9 +130,19 @@ class limamodel(models.Model):
         return self.name
     
 
+<<<<<<< HEAD
 class Sample(models.Model):
     name= models.CharField(max_length=20)
     def __str__(self):
         return self.name
+=======
+class sample(models.Model):
+    name= models.CharField(max_length=20)
+    def __str__(self):
+        return self.name
+    
+    
+
+>>>>>>> dafb976f469e44df77edc7fa28a53c9071f4c42c
     
     
