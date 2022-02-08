@@ -22,7 +22,7 @@ p {
     padding-bottom: 20px;
 }
 
-#carouselExampleIndicators {
+#carouselExampleFade {
     height: 50vh!important;
 }
 
@@ -246,6 +246,12 @@ nav {
     }
     .latestx {
         height: 80vh;
+    }
+    .carousel-inner {
+        height: 70vh;
+    }
+    .carousel-inner img {
+        width: 100%;
     }
 }
 
