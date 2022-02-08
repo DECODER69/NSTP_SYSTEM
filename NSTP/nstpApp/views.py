@@ -157,7 +157,17 @@ def adminlogin(request):
     return render(request, 'activities/login-admin.html')
 
 def admindashboard(request):
-    return render(request, 'activities/admindashboard.html')
+    imagex=carousel.objects.all()
+    return render(request, 'activities/admindashboard.html', {'imagex': imagex})
+
+def deleteimage(request, id):
+    carouimage = carousel.objects.get(id=id)
+    if request.method == 'POST':
+        carouimage.delete()
+        return redirect('/admindashboard')
+    return render(request, 'activities/imagedelete.html')
+    
+
 
 def admincertificate(request):
     request1 = certifications.objects.all()
@@ -692,5 +702,10 @@ def lima_delete(request, id):
     return redirect('/d_lima')
 
 
+
+
+
+
+# DELETION FOR IMAGES
 
                          # END PLATOON DELETE
