@@ -37,7 +37,7 @@ header{
 
 h2{
 	color:#000000;
-margin:1.5 0px;	
+    margin:1.5 0px;	
 }
 
 
@@ -64,85 +64,7 @@ footer{
 
 /* navbar */
 
-nav {
-    background-color: rgb(32, 32, 32);
-    border-bottom: 1px solid #691a1b;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-top: 10px solid#691a1b;
-}
 
-.navbar-nav {
-    border: solid 0.5px #b3b3b369;
-}
-
-#navbarNavAltMarkup li a {
-    color: #ffffff;
-    font-weight: bolder;
-    font-style: normal;
-}
-
-#navbarNavAltMarkup a:hover {
-    color: #DF465A;
-}
-
-.dropdown-menu {
-    background-color: #691a1b;
-}
-
-#FAQS {
-    margin-top: 10px;
-    background: transparent;
-}
-
-#FAQS h1 {
-    margin-top: 30px;
-    color: #000000;
-    font-weight: bolder;
-    float: left;
-}
-
-#navbarNavAltMarkup a {
-    color: white;
-    font-weight: bold;
-}
-
-#navbarNavAltMarkup a:focus {
-    border-bottom: 1px solid #691a1b;
-}
-
-#logo img {
-    width: 150px;
-    height: auto;
-}
-
-#hamburger i {
-    color: #691a1b;
-    font-size: 30px;
-}
-
-.label {
-    margin: 0;
-    display: grid;
-}
-
-#signin-btn a {
-    color: #ffffff;
-}
-
-#signin-btn:hover {
-    background-color: #bdbdbd;
-}
-
-#try {
-    display: flex;
-    margin: auto;
-}
-
-#navbarNav1 {
-    display: flex;
-    justify-content: center;
-}
 /* navbar End */
 
 /* footer */
@@ -214,6 +136,7 @@ nav {
     width: 100%;
     padding: 0px;
 	}
+    
 }
 
 

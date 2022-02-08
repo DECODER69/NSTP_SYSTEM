@@ -42,9 +42,14 @@ urlpatterns = [
     path('indexcard2/', views.indexcard2, name='indexcard2'),
     path('indexcard3/', views.indexcard3, name='indexcard3'),
     path('indexcard4/', views.indexcard4, name='indexcard4'),
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> 1e7dd98a26b8e3ae0aa98df7a3288f081551887a
 
+
+    path('admincwts/', views.admincwts, name='admincwts'),
  
     path('deleteform/', views.deleteform, name='deleteform'),
     #             ADMIN PLATOON UPLOAD

@@ -132,7 +132,7 @@
                     <a href="#"><img src="{% static 'image/c3.jpg' %}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <h5 class="card-title">CWTS Activities</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        {% comment %} <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> {% endcomment %}
                         <a href="{% url 'activities:indexcard1' %}" class="btn btn-primary">Learn more</a>
                      
                     </div>
@@ -141,7 +141,7 @@
                     <a href="#"><img src="{% static 'image/card1.jpg' %}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <h5 class="card-title">ROTC Activities</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        {% comment %} <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> {% endcomment %}
                         <a href="{% url 'activities:indexcard2' %}" class="btn btn-primary">Learn more</a>
                        
                     </div>
@@ -149,15 +149,15 @@
                 <div class="card">
                     <a href="#"><img src="{% static 'image/c3.jpg' %}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Learn more</a>
+                        <h5 class="card-title">MISSION and VISION</h5>
+                        {% comment %} <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> {% endcomment %}
+                        <a href="{% url 'activities:indexcard4' %}" class="btn btn-primary">Learn more</a>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
             <div class="latesty" id="card-deck1">
-                <div class="card-deck">
+                {% comment %} <div class="card-deck">
                     <div class="card">
                         <a href="#"><img src="{% static 'image/c3.jpg' %}" class="card-img-top" alt="..."></a>
                         <div class="card-body">
@@ -185,7 +185,7 @@
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
-                </div>
+                </div> {% endcomment %}
 
             </div>
 
@@ -211,17 +211,17 @@
                 Service Reserve Corps (SBNSRC) and to pursue volunteerism in the planning and implementation of community projects and programs established with the adopted and partner communities.
             </p> <br>
 
-            <div class="indention">
 
-                <h4>Three Program Components:</h4>
-
+     
+            <div class="indent2">
+                <h3>Three Program Components:</h3>
                 <ol>
                     <li>Reserve Office Training Corps (ROTC)</li>
                     <li>Literacy Training Service (LTS)</li>
                     <li>Civic Welfare Training Service (CWTS)</li>
                 </ol>
-
             </div>
+      
 
             <p>
                 ROTC is program institutionalized under Section 38 and 39 of RA No. 7077 designed to provide military training to tertiary level students in order to motivate, train, organized and mobilize them for national defense preparedness. (Section 3, RA 9163)

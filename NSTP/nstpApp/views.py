@@ -83,6 +83,12 @@ def certification(request):
     requests = certifications.objects.all()
     return render(request, 'activities/certification.html', {'requests': requests})
 
+
+
+def admincwts(request):
+    return render(request, 'activities/admincwts.html')
+
+
 #                   STUDENT PLATOON DISPLAY
 
 def student_alpha(request):
