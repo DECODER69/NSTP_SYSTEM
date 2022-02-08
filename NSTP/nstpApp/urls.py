@@ -43,8 +43,8 @@ urlpatterns = [
     path('indexcard3/', views.indexcard3, name='indexcard3'),
     path('indexcard4/', views.indexcard4, name='indexcard4'),
     
-    
-
+    path('admincwtslist/', views.admincwtslist, name='admincwtslist'),
+    path('adminrotclist/', views.adminrotclist, name='adminrotclist'),
 
     path('admincwts/', views.admincwts, name='admincwts'),
     path('cwtsupload/', views.cwtsupload, name='cwtsupload'),

@@ -67,6 +67,18 @@ def rotclist(request):
 def cwtslist(request):
     list1 = registration.objects.filter(field='CWTS')
     return render(request, 'activities/cwtslist.html', {'list1': list1})
+
+def adminrotclist(request):
+    rlist = registration.objects.filter(field='ROTC')
+    return render(request, 'activities/adminrotclist.html', {'rlist': rlist})
+
+def admincwtslist(request):
+    clist = registration.objects.filter(field='CWTS')
+    return render(request, 'activities/admincwtslist.html', {'clist': clist})
+
+
+
+
 def dashboard(request):
     return render(request, 'activities/Dashboard.html')
 def requested(request):
