@@ -30,7 +30,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" id="logo" href="...">
+            <a class="navbar-brand" id="logo" href="{% url 'activities:index' %}">
                 <img src="{% static 'image/tup.png' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
             </a>
 
@@ -94,10 +94,10 @@
                     <img src="{% static 'image/im2.jpg' %}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="{% static 'image/im1.PNG' %}" class="d-block w-100" alt="...">
+                    <img src="{% static 'image/im3.jpg' %}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="{% static 'image/im3.jpg' %}" class="d-block w-100" alt="...">
+                    <img src="{% static 'image/im1.png' %}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
@@ -129,26 +129,29 @@
             <h1 id="latest">LATEST ACTIVITIES</h1>
             <div class="card-deck">
                 <div class="card">
-                    <a href="#"><img src="{% static '/image/c3.jpg' %}" class="card-img-top" alt="..."></a>
+                    <a href="#"><img src="{% static 'image/c3.jpg' %}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">CWTS Activities</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="{% url 'activities:indexcard1' %}" class="btn btn-primary">Learn more</a>
+                     
                     </div>
                 </div>
                 <div class="card">
-                    <a href="#"><img src="{% static '/image/card1.jpg' %}" class="card-img-top" alt="..."></a>
+                    <a href="#"><img src="{% static 'image/card1.jpg' %}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">ROTC Activities</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="{% url 'activities:indexcard2' %}" class="btn btn-primary">Learn more</a>
+                       
                     </div>
                 </div>
                 <div class="card">
-                    <a href="#"><img src="{% static '/image/c3.jpg' %}" class="card-img-top" alt="..."></a>
+                    <a href="#"><img src="{% static 'image/c3.jpg' %}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#" class="btn btn-primary">Learn more</a>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
@@ -156,26 +159,29 @@
             <div class="latesty" id="card-deck1">
                 <div class="card-deck">
                     <div class="card">
-                        <a href="#"><img src="{% static '/image/c3.jpg' %}" class="card-img-top" alt="..."></a>
+                        <a href="#"><img src="{% static 'image/c3.jpg' %}" class="card-img-top" alt="..."></a>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">CWTS Mission and Vision</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="../html/index_card4.html" class="btn btn-primary">Learn more</a>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <a href="#"><img src="../image/card1.jpg" class="card-img-top" alt="..."></a>
+                        <a href="#"><img src="{% static 'image/card1.jpg' %}" class="card-img-top" alt="..."></a>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">ROTC Mission and Vision</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="../html/index_card5.html" class="btn btn-primary">Learn more</a>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <a href="#"><img src="../image/c3.jpg" class="card-img-top" alt="..."></a>
+                        <a href="#"><img src="{% static 'image/c3.jpg' %}" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="#" class="btn btn-primary">Learn more</a>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
@@ -184,78 +190,47 @@
             </div>
 
             <div class="load">
-                <a class="loadm" style="text-decoration: none; color:white" onclick="loads()">SHOW MORE </a>
+                <button class="loadm" style="text-decoration: none; color:white" onclick="loads()">SHOW MORE </button>
+
+
             </div>
 
         </div>
 
-        <!-- CONTENT -->
-        <!-- <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-            <h4 id="list-item-1">What is NSTP?</h4>
-            <p>Republic Act 9163 enabled the establishment of National Service Training Program for Tertiary Level students with an aim to promote civic consciousness among the youth and inculcate in them the spirit of nationalism and advance their involvement
-                in public and civic affairs. NSTP is a program designed to develop the youth’s physical, moral, spiritual, intellectual, and social well-being and promote defense preparedness and ethics of service while undergoing training in any of its
-                three program components. Its various components are specially designed to enhance the youth’s active contribution to the general welfare.</p>
-            <h4 id="list-item-2">What are its three program components?</h4>
-            <p>The NSTP has three components which are as follows: i. Reserve Officers’ Training Corps (ROTC) A program institutionalized under Sections 38 and 39 of Republic Act No. 7077 designed to provide military training to tertiary level students in
-                order to motivate, train, organize and mobilize them for national defense preparedness. ii. Literacy Training Service (LTS) A program designed to train students to become teachers of literacy and numeracy skills to school children, out
-                of school youth, and other segments of society in need of their service. iii. Civic Welfare Training Service (CWTS) It is composed of programs or activities contributory to the general welfare and the betterment of life for the members
-                of the community or the enhancement of its facilities, especially those devoted to improving health, education, environment, entrepreneurship, safety, recreation and morals of the citizenry.</p>
-            <h4 id="list-item-3">Who are required to complete the NSTP?</h4>
-            <p>Students of any baccalaureate degree course or at least two-year technical vocational courses in public and private educational institutions shall be required to complete one of the NSTP components as requisite for graduation. Exemptions only
-                apply to: i. Students who have already taken NSTP from a prior degree completed; ii. Transferees and shiftees who have completed NSTP prior to transferring or shifting; and iii. Foreign students or aliens</p>
-            <h4 id="list-item-4">How much time is needed to complete the NSTP?</h4>
-            <p>Each of the NSTP program components shall be undertaken for an academic period of two semesters (NSTP 1 and 2) or an equivalent one-semester integrated (NSTP 1-2) course. The allotted time for NSTP classes per semester is 54 – 90 hours. The
-                whole NSTP program weighs six units and should be taken for two semesters, three units each semester.</p>
-            <h4 id="list-item-5">How are the NSTP classes structured?</h4>
-            <p>Student enrolled in the first semester of NSTP shall undergo a Common Module phase which will focus on: citizenship training; drug education; disaster awareness, preparedness, and management; environmental protection; and other national security
-                concerns. Upon completion of the Common Module, the student must select the specific program component that he/she will pursue.</p>
-            <h4 id="list-item-6">Am I allowed to take NSTP 2 before NSTP 1?</h4>
-            <p>No. NSTP 1 is a prerequisite for NSTP 2.</p>
-            <h4 id="list-item-7">Am I allowed to take different program components for my NSTP 1 and 2?</h4>
-            <p>No, you have to take six (units) of the same component to complete NSTP. According to the Implementing Rules and Regulations of the National Service Training Program as mentioned in Rule III, Section 4, you are “required to complete one (1)
-                NSTP component of [your] choice as a graduation requirement.”</p>
-            <h4 id="list-item-8">Am I allowed to take the same program component but from different colleges?</h4>
-            <p>No. As a University policy, NSTP 1 and 2 should be taken in the same college.</p>
-            <h4 id="list-item-9">What activities are expected from NSTP 2 classes?</h4>
-            <p>NSTP 2 classes are mainly concerned with community engagement with the help of partner communities and organizations. CWTS and LTS students are required to conduct civic welfare and literacy activities or projects as part of the required 40-64
-                hours of community engagement.</p>
-            <h4 id="list-item-10">How are we graded in class?</h4>
-            <p>Numeric grading will be used for NSTP classes. The grading system is upon the discretion of the instructor who is handling the NSTP class. Grades for NSTP will not be included in the computation of the students’ weighted average.</p>
-            <h4 id="list-item-11">After graduation, what will happen to us?</h4>
-            <p>Graduates of the CWTS and LTS components of the NSTP shall belong to the National Service Reserve Corps (NSRC) and could be tapped by the State for literacy and civic welfare activities, especially in times of calamities while graduates of
-                the ROTC program shall form part of the Citizen Armed Force</p>
-            <h4 id="list-item-12">What if I break any of the rules related to taking classes in NSTP?</h4>
-            <p>Students who did not comply with the rules need to consult with the NSTP TUPC office.</p>
-        </div>
-    </main> -->
-        <!-- CHOOSE WHERE TO ENROLL -->
-        <!-- <div class="card text-center" id="enroll">
-        <div class="card-body">
-            <h1 class="card-title">How to Enroll?</h1>
-            <p class="card-text">Choose your poison</p>
 
-        </div>
-    </div> -->
-        <!-- <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-            <div class="card" id="option">
-                <img src="../image/236.png" id="rotc" class="card-img-top" alt="...">
-                <div class="card-body" id="option1">
 
-                    <a href="../html/signup.html" class="btn btn-primary" id="btn">REGISTER</a>
-                </div>
+
+
+
+
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <h4 id="list-item-1">About NSTP?</h4>
+            <p>
+                NSTP is a program aimed at enhancing civic consciousness and defense preparedness in the youth by developing the ethic of service and patriotism while undergoing training in any of its three (3) program components. Its various components are specially
+                designed to enhance the youth’s active contribution to the general welfare of the country. (Section 3, RA 9163) <br> <br> Graduates of the NSTP are encouraged to actively participate in the formation of School-Based National
+                Service Reserve Corps (SBNSRC) and to pursue volunteerism in the planning and implementation of community projects and programs established with the adopted and partner communities.
+            </p> <br>
+
+            <div class="indention">
+
+                <h4>Three Program Components:</h4>
+
+                <ol>
+                    <li>Reserve Office Training Corps (ROTC)</li>
+                    <li>Literacy Training Service (LTS)</li>
+                    <li>Civic Welfare Training Service (CWTS)</li>
+                </ol>
+
             </div>
-        </div>
-        <div class="col">
-            <div class="card" id="option">
-                <img src="../image/261571398_293900185949124_50887664155632565_n.png" id="cwts" class="card-img-top" alt="...">
-                <div class="card-body" id="option1">
 
-                    <a href="../html/signup.html" class="btn btn-primary" id="btn">REGISTER</a>
-                </div>
-            </div>
+            <p>
+                ROTC is program institutionalized under Section 38 and 39 of RA No. 7077 designed to provide military training to tertiary level students in order to motivate, train, organized and mobilize them for national defense preparedness. (Section 3, RA 9163)
+                <br> <br> CWTS refers to programs of activities contributory to the general welfare and the betterment of life for members of the community or the enhancement of its facilities, especially those devoted to improving health, education,
+                environment, entrepreneurship, safety, recreation and morals of the citizen (Section 3, RA 9163). <br> <br> LTS is a program designed to train students to become teachers of literacy and numeracy skills to school children, out of school
+                youth, and other segments of society in need of their service. (Section 3, RA 9163)
+            </p>
+
         </div>
-    </div> -->
 
         <!-- FOOTER -->
         <nav1 class="navbar navbar-expand-lg " id="footer">

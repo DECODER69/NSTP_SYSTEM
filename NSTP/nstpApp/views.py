@@ -45,6 +45,18 @@ def navbar(request):
 def navlanding(request):
     return render(request, 'activities/navlanding.html')
 
+def indexcard1(request):
+    return render(request, 'activities/index_card1.html')
+
+def indexcard2(request):
+    return render(request, 'activities/index_card2.html')
+
+def indexcard3(request):
+    return render(request, 'activities/index_card3.html')
+
+def indexcard4(request):
+    return render(request, 'activities/index_card4.html')
+
 def rotclist(request):
     list = registration.objects.filter(field='ROTC')
     return render(request, 'activities/rotclist.html', {'list': list})
