@@ -8,7 +8,7 @@ from django.template import context
 import nstpApp
 from .models import registration
 from .models import certifications
-from .models import alphamodel, bravomodel, charliemodel, deltamodel, echomodel, foxtrotmodel, golfmodel, hotelmodel, indiamodel, julietmodel, kilomodel, limamodel
+from .models import alphamodel, bravomodel, charliemodel, deltamodel, echomodel, foxtrotmodel, golfmodel, hotelmodel, indiamodel, julietmodel, kilomodel, limamodel, cwts, carousel
 
 
 from django.core.exceptions import ObjectDoesNotExist
@@ -32,7 +32,8 @@ password=''
 # studentside
 
 def index(request):
-    return render(request, 'activities/index.html')
+    images=carousel.objects.all()
+    return render(request, 'activities/index.html', {'images': images})
 def login(request):
     return render(request, 'activities/login.html')
 def register(request):
@@ -72,8 +73,11 @@ def requested(request):
 # @login_required(login_url='/login')
 def platoon(request):
     return render(request, 'activities/Platoon.html')
-def cwts(request):
-    return render(request, 'activities/Cwts.html')
+def cwtss(request):
+    display = cwts.objects.all()
+    return render(request, 'activities/Cwts.html', {'display': display})
+
+
 
 
 def userlogout(request):
@@ -86,7 +90,8 @@ def certification(request):
 
 
 def admincwts(request):
-    return render(request, 'activities/admincwts.html')
+    fetch = cwts.objects.all()
+    return render(request, 'activities/admincwts.html', {'fetch': fetch})
 
 
 #                   STUDENT PLATOON DISPLAY
@@ -133,11 +138,11 @@ def student_juliet(request):
 
 def student_kilo(request):
     kilo_display = kilomodel.objects.all()
-    return render(request, 'activities/adminkilo.html', {'kilo_display': kilo_display})
+    return render(request, 'activities/kilo.html', {'kilo_display': kilo_display})
 
 def student_lima(request):
     lima_display = limamodel.objects.all()
-    return render(request, 'activities/adminlima.html', {'lima_display': lima_display})
+    return render(request, 'activities/lima.html', {'lima_display': lima_display})
 
 
 
@@ -573,6 +578,42 @@ def lima(request):
     else:
         print("error2")
         return redirect('/d_lima')
+    
+    
+
+def cwtsupload(request):
+    if request.method == 'POST':    
+
+        cwts_file = request.FILES["document"]
+        cwts_name = request.POST["notes"]
+        file = cwts.objects.create(pdf=cwts_file, name=cwts_name)
+        file.save()
+        print("error")
+        return redirect('/admincwts')
+    else:
+        print("error2")
+        return redirect('/admincwts')
+    
+def cwts_delete(request, id):
+    member = cwts.objects.get(id=id)
+    member.delete()
+    return redirect('/admincwts')
+
+
+
+
+def dashboardupload(request):
+    if request.method == 'POST':
+        dashboard_file = request.FILES["upload"]
+        file = carousel.objects.create(imagefile=dashboard_file)
+        file.save()
+        print("error")
+        return redirect('/admindashboard')
+    else:
+        print("error2")
+        return redirect('/admindashboard')
+            
+
     
     
                             #P END OF PLATOON UPLOADS

@@ -125,4 +125,17 @@ class limamodel(models.Model):
     def __str__(self):
         return self.name
     
+class cwts(models.Model):
+    name = models.CharField(max_length=20)
+    pdf= models.FileField(upload_to='pdf/')
+    def __str__(self):
+        return self.name
+    
+    
+class carousel(models.Model):
+    imagefile= models.ImageField(upload_to='images/', null=True)
+    
+    def __str__(self):
+        return self.imagefile
+    
 

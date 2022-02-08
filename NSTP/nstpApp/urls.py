@@ -25,7 +25,7 @@ urlpatterns = [
     path('cwtslist/', views.cwtslist, name='cwtslist'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('platoon/', views.platoon, name='platoon'),
-    path('cwts/', views.cwts, name='cwts'),
+    path('cwtss/', views.cwtss, name='cwtss'),
     path('userlogout/', views.userlogout, name='userlogout'),
     path('certification/', views.certification, name='certification'),
     path('cert/', views.cert, name='cert'),
@@ -42,14 +42,14 @@ urlpatterns = [
     path('indexcard2/', views.indexcard2, name='indexcard2'),
     path('indexcard3/', views.indexcard3, name='indexcard3'),
     path('indexcard4/', views.indexcard4, name='indexcard4'),
-<<<<<<< HEAD
     
     
-=======
->>>>>>> 1e7dd98a26b8e3ae0aa98df7a3288f081551887a
 
 
     path('admincwts/', views.admincwts, name='admincwts'),
+    path('cwtsupload/', views.cwtsupload, name='cwtsupload'),
+    path('cwts_delete/<str:id>', views.cwts_delete, name='cwts_delete'),
+    path('dashboardupload/', views.dashboardupload, name='dashboardupload'),
  
     path('deleteform/', views.deleteform, name='deleteform'),
     #             ADMIN PLATOON UPLOAD

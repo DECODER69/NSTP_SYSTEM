@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 <html lang="en">
 
 <head>
@@ -22,27 +21,30 @@
     <!-- Grid -->
     <div class="frames">
         <div class=" col-6">
+            <form action="{% url 'activities:dashboardupload' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="file-upload">
+                    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
 
-            <div class="file-upload">
-                <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+                    <div class="image-upload-wrap">
 
-                <div class="image-upload-wrap">
-                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                    <div class="drag-text">
-                        <h3>Drag and drop a file or select add Image</h3>
+                        <input name="upload" class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
+                        <div class="drag-text">
+                            <h3>Drag and drop a file or select add Image</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content">
+                        <img class="file-upload-image" src="#" alt="your image" />
+                        <div class="image-title-wrap">
+                            <button class="remove-image" id="remove-image" type="submit">Upload</button>
+                            <h1></h1>
+
+                            <span class="image-title">Uploaded Image</span>
+                        </div>
+
                     </div>
                 </div>
-                <div class="file-upload-content">
-                    <img class="file-upload-image" src="#" alt="your image" />
-                    <div class="image-title-wrap">
-                        <button class="remove-image" id="remove-image" type="submit">Upload</button>
-                        <h1></h1>
-
-                        <span class="image-title">Uploaded Image</span>
-                    </div>
-                </div>
-            </div>
-
+            </form>
         </div>
 
 

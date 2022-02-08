@@ -28,7 +28,7 @@
 
     <!-- uploads -->
     <div class="fortit">
-        <form action="{% url 'activities:alpha' %}" method="POST" enctype="multipart/form-data" name="files">
+        <form action="{% url 'activities:cwtsupload' %}" method="POST" enctype="multipart/form-data" name="files">
 
             <div class="uploads">
 
@@ -98,7 +98,7 @@
                         </thead>
 
                         <tbody>
-                            {% for file in alpha_display %}
+                            {% for file in fetch %}
 
                             <tr>
 
@@ -108,7 +108,7 @@
                                     <button class="pdf"><a style="text-decoration:none" href="{{file.pdf.url}}" target="__blank">DOWNLOAD</a></button> {% endif %}
 
                                 </td>
-                                <td><button class="delete"><a style="text-decoration:none" href="{% url 'activities:alpha_delete' file.id %}" target="__blank">DELETE</a></button></td>
+                                <td><button class="delete"><a style="text-decoration:none" href="{% url 'activities:cwts_delete' file.id %}" target="__blank">DELETE</a></button></td>
 
                             </tr>
                             {% endfor %}

@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
-body{
-	font-family: Arial;
-	margin:0;
-	padding:20px;
-	background-color: #f1f1f1;
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f1f1f1;
 }
+
 h4 {
     color: #ffffff;
 }
+
 p {
     color: #691a1b;
     padding-left: 40px;
@@ -16,77 +17,73 @@ p {
     padding-bottom: 20px;
 }
 
-*{
-	box-sizing: border-box;
-}
-.row:after{
-	content: '';
-	display: table;
-	clear: both;
-}
-header{
-	background-color: #ffffff;
-	padding:30px;
-}
-.hhead h1{
-	text-align: center;
-	font-size:60px;
-	color:#000000;
-	margin:1.5 0px;
+* {
+    box-sizing: border-box;
 }
 
-h2{
-	color:#000000;
-    margin:1.5 0px;	
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
-
-
-.card{
-	padding: 20px;
-	background-color: #ffffff;
- margin-top:20px;
+header {
+    background-color: #ffffff;
+    padding: 30px;
 }
 
-.card img{
-	width: 100%;
+.hhead h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #000000;
+    margin: 1.5 0px;
 }
 
-
-
-
-footer{
-	background-color: #dddddd;
-	padding: 20px;
-	text-align: center;
-	margin-top: 20px;
+h2 {
+    color: #000000;
+    margin: 1.5 0px;
 }
+
+.card {
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+.card img {
+    width: 100%;
+}
+
+footer {
+    background-color: #dddddd;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
 
 /* navbar */
 
 
 /* navbar End */
 
+
 /* footer */
+
 #footer {
     background-color: #691a1b;
     bottom: 0;
 }
+
 #navbarNav1 {
     display: flex;
     justify-content: center;
 }
 
+
 /* navbar media */
+
 @media only screen and (max-width: 1000px) {
-    nav,
-    main {
-        padding: 0 10px 0 10px;
-    }
-    nav {
-        position: fixed;
-        top: 0;
-    }
     #logo img {
         width: 60px;
         height: auto;
@@ -111,33 +108,16 @@ footer{
     }
 }
 
+
 /* navbar fullscreen */
-@media only screen and (min-width: 1000px) {
-    #navbarNavAltMarkup {
-        display: flex;
-        justify-content: flex-end;
-    }
-    nav {
-        height: 200px;
-    }
-    .latestx {
-        height: 150vh;
-    }
-}
-
-
-
 
 
 /*responsive */
 
-@media(max-width:800px){
-	.left-column,.right-column{
-    width: 100%;
-    padding: 0px;
-	}
-    
+@media(max-width:800px) {
+    .left-column,
+    .right-column {
+        width: 100%;
+        padding: 0px;
+    }
 }
-
-
-
