@@ -642,64 +642,88 @@ def dashboardupload(request):
 
 def alpha_delete(request, id):
     member = alphamodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_alpha')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_alpha')
+    return render(request, 'activities/alphadel.html')
 
 def bravo_delete(request, id):
     member = bravomodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_bravo')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_bravo')
+    return render(request, 'activities/bravodel.html')
 
 def charlie_delete(request, id):
     member = charliemodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_charlie')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_charlie')
+    return render(request, 'activities/charliedel.html')
 
 def delta_delete(request, id):
     member = deltamodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_delta')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_delta')
+    return render(request, 'activities/deltadel.html')
 
 def echo_delete(request, id):
     member = echomodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_echo')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_echo')
+    return render(request, 'activities/echodel.html')
 
 
 def foxtrot_delete(request, id):
     member = foxtrotmodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_foxtrot')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_foxtrot')
+    return render(request, 'activities/foxtrotdel.html')
 
 def golf_delete(request, id):
     member = golfmodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_golf')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_golf')
+    return render(request, 'activities/golfdel.html')
 
 def hotel_delete(request, id):
     member = hotelmodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_hotel')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_hotel')
+    return render(request, 'activities/hoteldel.html')
 
 def india_delete(request, id):
     member = indiamodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_india')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_india')
+    return render(request, 'activities/indiadel.html')
 
 def juliet_delete(request, id):
     member = julietmodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_juliet')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_juliet')
+    return render(request, 'activities/julietdel.html')
 
 def kilo_delete(request, id):
     member = kilomodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_kilo')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_kilo')
+    return render(request, 'activities/kilodel.html')
 
 def lima_delete(request, id):
     member = limamodel.objects.get(id=id)
-    member.delete()
-    return redirect('/d_lima')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/d_lima')
+    return render(request, 'activities/limadel.html')
 
 
 
