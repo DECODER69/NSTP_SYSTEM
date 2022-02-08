@@ -60,6 +60,10 @@ nav {
     background-color: #691a1b;
 }
 
+.dropdown-menu a {
+    background-color: #691a1b;
+}
+
 #FAQS {
     margin-top: 10px;
     background: transparent;
@@ -73,7 +77,7 @@ nav {
 }
 
 #navbarNavAltMarkup a {
-    color: white;
+    color: rgb(63, 63, 63);
     font-weight: bold;
 }
 
