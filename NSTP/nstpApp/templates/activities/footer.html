@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    {% comment %} <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"> {% endcomment %}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <body>
         <!-- Footer -->
         <footer class="page-footer font-small stylish-color-dark pt-4">
@@ -22,11 +22,14 @@
                 <div class="row">
 
                     <!-- Grid column -->
-                    <div class="col-md-4 mx-auto">
+                    <div class="content color col-md-4 mx-auto">
 
                         <!-- Content -->
-                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-                        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">NSTP</h5>
+                        <p>
+                            Naval Reserve Officer's Training Corps <br>
+                            Corps of Midshipmen/women <br>
+                            Technological University of the Philippines-Cavite</p>
 
                     </div>
                     <!-- Grid column -->
@@ -34,24 +37,16 @@
                     <hr class="clearfix w-100 d-md-none">
 
                     <!-- Grid column -->
-                    <div class="col-md-2 mx-auto">
+                    <div class="link1 col-md-2 mx-auto">
 
                         <!-- Links -->
-                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About ROTC</h5>
 
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!">Link 1</a>
+                                <a href="{% url 'activities:indexcard2' %}" target="_blank">Learn More</a>
                             </li>
-                            <li>
-                                <a href="#!">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 4</a>
-                            </li>
+                       
                         </ul>
 
                     </div>
@@ -60,24 +55,16 @@
                     <hr class="clearfix w-100 d-md-none">
 
                     <!-- Grid column -->
-                    <div class="col-md-2 mx-auto">
+                    <div class="link2 col-md-2 mx-auto">
 
                         <!-- Links -->
-                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About CWTS</h5>
 
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!">Link 1</a>
+                                <a href="{% url 'activities:indexcard1' %}" target="_blank">Learn More</a>
                             </li>
-                            <li>
-                                <a href="#!">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#!">Link 4</a>
-                            </li>
+                          
                         </ul>
 
                     </div>
@@ -86,24 +73,22 @@
                     <hr class="clearfix w-100 d-md-none">
 
                     <!-- Grid column -->
-                    <div class="col-md-2 mx-auto">
+                    <div class="link3 col-md-2 mx-auto">
 
                         <!-- Links -->
-                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5>
 
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!">Link 1</a>
+                                <a href="#!">christian.rapal@gsfe.tupcavite.edu.ph</a>
                             </li>
                             <li>
-                                <a href="#!">Link 2</a>
+                                <a href="#!">jhousua.jumalon@gsfe.tupcavite.edu.ph</a>
                             </li>
                             <li>
-                                <a href="#!">Link 3</a>
+                                <a href="#!">johnchristopher@gsfe.tupcavite.edu.ph</a>
                             </li>
-                            <li>
-                                <a href="#!">Link 4</a>
-                            </li>
+                           
                         </ul>
 
                     </div>
@@ -118,9 +103,9 @@
             <hr>
 
             <!-- Call to action -->
-            <ul class="list-unstyled list-inline text-center py-2">
-                <li class="list-inline-item">
-                    <h5 class="mb-1">Register for free</h5>
+            <ul class="backg list-unstyled list-inline text-center py-2">
+                <li class="backg list-inline-item">
+                    <h5 class="mb-1">Register now</h5>
                 </li>
                 <li class="list-inline-item">
                     <a href="/register" class="btn btn-danger btn-rounded">Sign up!</a>
@@ -133,13 +118,13 @@
             <!-- Social buttons -->
             <ul class="list-unstyled list-inline text-center">
                 <li class="list-inline-item">
-                    <a class="btn-floating btn-fb mx-1">
-                        <i class="fab fa-facebook-f"> </i>
-                    </a>
+                    <a class="btn-floating btn-fb mx-1" href="https://web.facebook.com/236th.nrotcu.tupc" target="_blank">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>  
                 </li>
                 <li class="list-inline-item">
                     <a class="btn-floating btn-tw mx-1">
-                        <i class="fab fa-twitter"> </i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="list-inline-item">
@@ -148,21 +133,20 @@
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="btn-floating btn-li mx-1">
-                        <i class="fab fa-linkedin-in"> </i>
+                    <a class="btn-floating btn-li mx-1" href="https://github.com/DECODER69/NSTP_SYSTEM" target="_blank">
+                        
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        
+                       
                     </a>
                 </li>
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-dribbble mx-1">
-                        <i class="fab fa-dribbble"> </i>
-                    </a>
-                </li>
+               
             </ul>
             <!-- Social buttons -->
 
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+            <div class="footer-copyright text-center py-3">
+              
             </div>
             <!-- Copyright -->
 
