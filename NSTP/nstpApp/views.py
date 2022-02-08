@@ -43,6 +43,9 @@ def navbar(request):
     data = registration.objects.all()
     return render(request, 'activities/base.html', {'data': data})
 
+def footer(request):
+    return render(request, 'activities/footer.html')
+
 def navlanding(request):
     return render(request, 'activities/navlanding.html')
 
