@@ -23,7 +23,7 @@
 
 <body>
 
-    {% csrf_token %}
+
     <div class="card" id="cards" style="width: 18rem;">
         <a href="../../landing_page/index.html">
             <div class="top">
@@ -32,6 +32,7 @@
             </div>
         </a>
         <form action="/admin" method="post">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
                 <input type="text" class="form-control" id="Email1" aria-describedby="emailHelp" name="username">

@@ -14,14 +14,17 @@
 }
 
 .card {
+    padding: 10px;
     display: flex;
     margin: auto;
+    height: 400px;
 }
 
 body {
     display: flex;
     align-content: center;
     min-height: 100vh;
+    background-color: rgb(190, 190, 190);
 }
 
 #logo img {
@@ -66,4 +69,10 @@ a {
     cursor: pointer;
     width: 100%;
     margin-top: 10px;
+}
+
+.signup {
+    margin: auto;
+    display: flex;
+    text-align: center;
 }

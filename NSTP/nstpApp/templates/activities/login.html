@@ -25,7 +25,11 @@
 <body>
 
 
-    <div class="card" id="cards" style="width: 18rem;">
+    <!-- <div class="alert alert-success m-2" id="msg" role="alert">Alert!</div> -->
+
+
+    <div class="card" id="cards">
+
         <a href="../../landing_page/index.html">
             <div class="top">
                 <button id="logo"><a href="{% url 'activities:index' %}"><img src="{% static 'image/tup.png' %}"></a></button>
@@ -33,9 +37,9 @@
             </div>
         </a>
         <form action="{% url 'activities:userlogin' %}" method="POST">
-            {% csrf_token %}
+            {% include 'activities/messages.html' %} {% csrf_token %}
             <div class="form-group">
-                <label for="exampleInputEmail1">Username</label>
+                <label for="exampleInputEmail1">ID Number</label>
                 <input type="text" class="form-control" id="Email1" aria-describedby="emailHelp" name="username">
 
             </div>
@@ -44,7 +48,8 @@
                 <input type="password" class="form-control" id="Password1" name="password">
             </div>
             <button type="submit" class="submitbtn btn btn-primary" id="submitbtn" disabled="disabled">Submit</button>
-            <div class="signup"> Don't have an account yet? <a href="/register" id="back">signup</a> now.
+            <br>&nbsp;
+            <div class="signup"> Don't have an account yet? &nbsp;<a href="/register" id="back">signup</a>&nbsp; now.
             </div>
 
         </form>
@@ -60,6 +65,12 @@
                 submitbtn.setAttribute('disabled', 'disabled');
             }
         });
+
+        setTimeout(function() {
+            if ($('#msg').length > 0) {
+                $('#msg').remove();
+            }
+        }, 3000)
     </script>
 
     <!-- BOOTSTRAP BUNDLE -->

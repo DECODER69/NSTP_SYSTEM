@@ -215,7 +215,7 @@ def updateform(request):
 
 
     
-@login_required(login_url='/login/')
+
 def registerprocess(request):
     if request.method == 'POST':
         idnum=request.POST['idnum']
@@ -231,17 +231,22 @@ def registerprocess(request):
         password=request.POST.get('password')
         section=request.POST.get('section')
         field=request.POST.get('field')
-
+        
+    try:
         create = registration.objects.create(idnum=idnum, lname=lname, fname=fname, minitial=minitial, address=address, cpnumber=cpnumber, email=email, gender=gender, age=age, bdate=bdate, 
-password=password, section=section, field=field)
+        password=password, section=section, field=field)
         create.save()
         return render(request, 'activities/login.html')
-    else:
+    except:
+        messages.error(request, 'Invalid Inputs! Please Check it and Try Again')
         return render(request, 'activities/signup.html')
+        
+    #  else:
+    #      return render(request, 'activities/signup.html')
         
 def userlogin(request):
     if request.method=="POST":
-        m=sql.connect(host="localhost",user="admin",password="",database='nstpsystem')
+        m=sql.connect(host="localhost",user="root",password="",database='nstpsystem')
         cursor=m.cursor()
         d=request.POST
         for key,value in d.items():
@@ -255,6 +260,7 @@ def userlogin(request):
         cursor.execute(c)
         t=tuple(cursor.fetchall())
         if t==():
+            messages.error(request, 'Invalid username or password')
             return render(request, 'activities/login.html')
             
         else:
@@ -306,7 +312,7 @@ def admin(request):
         return redirect('/adminlogin')
             
 
-
+@login_required(login_url='/login/')
 def cert(request):
     if request.method == 'POST':
         cert_email = request.POST.get('cert_email')
