@@ -7,12 +7,16 @@
 }
 
 body {
-    background-color: white;
+    /* background-color: red */
     overflow-x: hidden;
 }
 
 h4 {
     color: #ffffff;
+}
+.headdd  {
+    padding: 100px;
+    background-color: #691a1b;
 }
 
 p {
@@ -20,6 +24,7 @@ p {
     padding-left: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
+    
 }
 
 #carouselExampleIndicators {
@@ -47,7 +52,7 @@ nav {
 }
 
 #navbarNavAltMarkup li a {
-    color: #ffffff;
+    color: #ffffff !important;
     font-weight: bolder;
     font-style: normal;
 }
@@ -57,7 +62,7 @@ nav {
 }
 
 .dropdown-menu {
-    background-color: #691a1b;
+    background-color: #691a1b !important;
 }
 
 .dropdown-menu a {
@@ -204,7 +209,9 @@ nav {
     color: black;
     margin-left: 40px;
 }
-
+.list-item-1{
+    color: #000000;
+}
 
 /* .load:before {
     content: '';

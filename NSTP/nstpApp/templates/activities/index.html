@@ -26,8 +26,10 @@
 </head>
 
 <body>
-     {% include 'activities/navlanding.html' %} 
-   
+
+    <!-- NAVBAR -->
+    {% include 'activities/navlanding.html' %}
+
     <!-- {% for im in images%}
 
     <div class="carousel-item {% if forloop.first %} active {% endif %}">
@@ -156,8 +158,8 @@
 
 
 
-        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-            <h4 id="list-item-1">About NSTP?</h4>
+        <div class="headdd">
+            <h3 id="list-item-1">About NSTP?</h3>
             <p>
                 NSTP is a program aimed at enhancing civic consciousness and defense preparedness in the youth by developing the ethic of service and patriotism while undergoing training in any of its three (3) program components. Its various components are specially
                 designed to enhance the youth’s active contribution to the general welfare of the country. (Section 3, RA 9163) <br> <br> Graduates of the NSTP are encouraged to actively participate in the formation of School-Based National
@@ -166,13 +168,16 @@
 
 
 
+
             <div class="indent2">
                 <h3>Three Program Components:</h3>
-                <ol>
-                    <li>Reserve Office Training Corps (ROTC)</li>
-                    <li>Literacy Training Service (LTS)</li>
-                    <li>Civic Welfare Training Service (CWTS)</li>
-                </ol>
+                <p>
+                    Reserve Office Training Corps (ROTC) <br>
+                    Literacy Training Service (LTS) <br>
+                    Civic Welfare Training Service (CWTS) <br>
+ 
+                </p>
+                  
             </div>
 
 
@@ -184,9 +189,8 @@
             </p>
 
         </div>
-
         <!-- FOOTER -->
-        {% comment %} {% include 'activities/footer.html' %} {% endcomment %}
+        {% include 'activities/footer.html' %}
 
 
 
