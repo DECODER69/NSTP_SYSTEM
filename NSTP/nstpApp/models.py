@@ -3,13 +3,7 @@ from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 
 
-# class CustomUser(AbstractUser):
-    
-    
-    
 
-
-# Create your models here.
 class registration(models.Model):
     field_rotc = 0
     field_cwts = 1
@@ -128,7 +122,3 @@ class limamodel(models.Model):
     pdf= models.FileField(upload_to='pdf/')
     def __str__(self):
         return self.name
-    
-
-    
-    
