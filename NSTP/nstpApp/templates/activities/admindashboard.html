@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'css_admin/dashboard.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
@@ -20,7 +21,7 @@
 
     <!-- Grid -->
     <div class="frames">
-        <div class=" col-6">
+        <div class="uploaded col-6">
             <form action="{% url 'activities:dashboardupload' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="file-upload">
@@ -48,48 +49,80 @@
         </div>
 
 
-        <div class=" col-6">
+        <div class="uploaded col-6">
+
+            <h1 style="text-align: center;">UPLOADED IMAGES</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">View</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for image in imagex %}
+                    <tr>
+                        <td>{{image.imagefile}}</td>
+                        <td class="view">{% if image.imagefile %}
+                            <a  style="text-decoration:none" href="{{image.imagefile.url}}" target="_blank">VIEW</a>{% endif %}
+                        </td>
+                        <td><a style="text-decoration:none" href="{% url 'activities:deleteimage' image.id %}" ><i class="bi bi-trash"></i></a></td>
+
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+
             <!-- Calendar -->
 
-            <div class="wrapper">
-                <div class="container-calendar">
-                    <h3 id="monthAndYear"></h3>
-                    <div class="button-container-calendar">
-                        <button id="previous" onclick="previous()">&#8249;</button>
-                        <button id="next" onclick="next()">&#8250;</button>
-                    </div>
 
-                    <table class="table-calendar" id="calendar" data-lang="en">
-                        <thead id="thead-month"></thead>
-                        <tbody id="calendar-body"></tbody>
-                    </table>
-
-                    <div class="footer-container-calendar">
-                        <label for="month">Jump To: </label>
-                        <select id="month" onchange="jump()">
-                                    <option value=0>Jan</option>
-                                    <option value=1>Feb</option>
-                                    <option value=2>Mar</option>
-                                    <option value=3>Apr</option>
-                                    <option value=4>May</option>
-                                    <option value=5>Jun</option>
-                                    <option value=6>Jul</option>
-                                    <option value=7>Aug</option>
-                                    <option value=8>Sep</option>
-                                    <option value=9>Oct</option>
-                                    <option value=10>Nov</option>
-                                    <option value=11>Dec</option>
-                                </select>
-                        <select id="year" onchange="jump()"></select>
-                    </div>
-                </div>
-            </div>
 
 
         </div>
+    </div><br>
+    <div class="none">
+        <div class="wrapper">
+            <h1 style="text-align: center;">LIVE CALENDAR</h1><br>&nbsp;
+            <div class="container-calendar">
+                <h3 id="monthAndYear"></h3>
+                <div class="button-container-calendar">
+                    <button id="previous" onclick="previous()">&#8249;</button>
+                    <button id="next" onclick="next()">&#8250;</button>
+                </div>
 
+                <table class="table-calendar" id="calendar" data-lang="en">
+                    <thead id="thead-month"></thead>
+                    <tbody id="calendar-body"></tbody>
+                </table>
+
+                <div class="footer-container-calendar">
+                    <label for="month">Jump To: </label>
+                    <select id="month" onchange="jump()">
+                                <option value=0>Jan</option>
+                                <option value=1>Feb</option>
+                                <option value=2>Mar</option>
+                                <option value=3>Apr</option>
+                                <option value=4>May</option>
+                                <option value=5>Jun</option>
+                                <option value=6>Jul</option>
+                                <option value=7>Aug</option>
+                                <option value=8>Sep</option>
+                                <option value=9>Oct</option>
+                                <option value=10>Nov</option>
+                                <option value=11>Dec</option>
+                            </select>
+                    <select id="year" onchange="jump()"></select>
+                </div>
+            </div>
+        </div>
 
     </div>
+
+
+
 
 
 

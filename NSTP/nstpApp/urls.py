@@ -51,6 +51,7 @@ urlpatterns = [
     path('cwts_delete/<str:id>', views.cwts_delete, name='cwts_delete'),
     path('dashboardupload/', views.dashboardupload, name='dashboardupload'),
     path('footer/', views.footer, name='footer'),
+    path('deleteimage/<str:id>', views.deleteimage, name='deleteimage'),
  
     path('deleteform/', views.deleteform, name='deleteform'),
     #             ADMIN PLATOON UPLOAD
