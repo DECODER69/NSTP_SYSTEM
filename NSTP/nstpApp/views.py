@@ -158,6 +158,7 @@ def adminlogin(request):
 
 def admindashboard(request):
     imagex=carousel.objects.all()
+    # users = User.objects.all()
     return render(request, 'activities/admindashboard.html', {'imagex': imagex})
 
 def deleteimage(request, id):
