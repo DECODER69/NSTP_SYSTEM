@@ -14,9 +14,17 @@ body {
 h4 {
     color: #ffffff;
 }
-.headdd  {
+
+.headdd {
     padding: 100px;
-    background-color: #691a1b;
+    background-color: #3a2020;
+}
+
+.nnd {
+    background-color: #ffffff;
+    margin-top: -250px;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 p {
@@ -24,7 +32,6 @@ p {
     padding-left: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    
 }
 
 #carouselExampleIndicators {
@@ -156,6 +163,11 @@ nav {
     height: 100vh;
 }
 
+.latest {
+    color: rgb(230, 36, 41);
+    padding: 20px;
+}
+
 .latestx {
     height: 500px;
     background-color: rgb(21, 21, 21);
@@ -209,9 +221,11 @@ nav {
     color: black;
     margin-left: 40px;
 }
-.list-item-1{
+
+.list-item-1 {
     color: #000000;
 }
+
 
 /* .load:before {
     content: '';
