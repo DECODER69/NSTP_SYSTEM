@@ -41,6 +41,10 @@ def register(request):
 def navbar(request):
     data = registration.objects.all()
     return render(request, 'activities/base.html', {'data': data})
+
+def navlanding(request):
+    return render(request, 'activities/navlanding.html')
+
 def rotclist(request):
     list = registration.objects.filter(field='ROTC')
     return render(request, 'activities/rotclist.html', {'list': list})
@@ -53,7 +57,7 @@ def requested(request):
     requests = certifications.objects.all()
     return render(request, 'activities/certification.html', {'requests': requests})
 
-@login_required(login_url='/login')
+# @login_required(login_url='/login')
 def platoon(request):
     return render(request, 'activities/Platoon.html')
 def cwts(request):

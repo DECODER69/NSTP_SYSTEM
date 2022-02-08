@@ -32,7 +32,7 @@
         {% csrf_token %}
         <a href="../../landing_page/index.html">
             <div class="top">
-                <a href="../html/index.html" id="logo"><img src="{% static 'image/tup.png' %}"></a>
+                <a href="{% url 'activities:index' %}" id="logo"><img src="{% static 'image/tup.png' %}"></a>
                 <h5>Technological University of the Philippines</h5>
             </div>
         </a>

@@ -36,7 +36,7 @@ urlpatterns = [
     path('delete/<str:id>', views.delete, name='delete'),
     path('update/', views.update, name='update'),
     path('admindashboard/', views.admindashboard, name='admindashboard'),
-    
+    path('navlanding/', views.navlanding, name='navlanding'),
     path('updateform/', views.updateform, name='updateform'),
     
 

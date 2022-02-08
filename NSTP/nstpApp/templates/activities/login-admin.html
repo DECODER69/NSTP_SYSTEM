@@ -19,18 +19,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
-</head>
+
 
 <body>
-    <form action="/admin" method="post">
-        {% csrf_token %}
-        <div class="card" id="cards" style="width: 18rem;">
-            <a href="../../landing_page/index.html">
-                <div class="top">
-                    <button id="logo"><a href="#"><img src="{% static 'image/tup.png' %}"></a></button>
-                    <h5>Technological University of the Philippines</h5>
-                </div>
-            </a>
+
+    {% csrf_token %}
+    <div class="card" id="cards" style="width: 18rem;">
+        <a href="../../landing_page/index.html">
+            <div class="top">
+                <button id="logo"><a href="{% url 'activities:index' %}"><img src="{% static 'image/tup.png' %}"></a></button>
+                <h5>Technological University of the Philippines</h5>
+            </div>
+        </a>
+        <form action="/admin" method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
                 <input type="text" class="form-control" id="Email1" aria-describedby="emailHelp" name="username">
@@ -42,13 +43,13 @@
             </div>
 
 
-
-
             <button type="submit" class="submitbtn btn btn-primary" id="submitbtn" disabled="disabled">Submit</button>
             <div class="signup"> Don't have an account yet? <a href="/register" id="back">signup</a> now.
+
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
     <script>
         cards.addEventListener('input', () => {
             if (Email1.value.length > 0 &&
