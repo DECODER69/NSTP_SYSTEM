@@ -43,9 +43,10 @@ urlpatterns = [
     path('indexcard3/', views.indexcard3, name='indexcard3'),
     path('indexcard4/', views.indexcard4, name='indexcard4'),
     
+    
 
  
-    
+    path('deleteform/', views.deleteform, name='deleteform'),
     #             ADMIN PLATOON UPLOAD
     path('alpha/', views.alpha, name='alpha'),
     path('bravo/', views.bravo, name='bravo'),

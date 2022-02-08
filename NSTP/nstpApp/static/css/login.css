@@ -18,13 +18,15 @@
     display: flex;
     margin: auto;
     height: 400px;
+    border: solid 5px #2e2e2e;
+    height: 500px;
 }
 
 body {
     display: flex;
     align-content: center;
     min-height: 100vh;
-    background-color: rgb(190, 190, 190);
+    background-color: rgb(255, 255, 255);
 }
 
 #logo img {

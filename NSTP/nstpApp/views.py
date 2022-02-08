@@ -306,9 +306,11 @@ def admin(request):
             auth.login(request, user)
             return redirect('/admindashboard')
         else:
+            messages.error(request, 'Invalid username or password')
             return redirect('/adminlogin')
        
     else:
+        messages.error(request, 'Invalid username or password')
         return redirect('/adminlogin')
             
 
@@ -354,8 +356,13 @@ def logout_user(request):
 #     return redirect('/admincertificate')    
 def delete(request, id):
     member = certifications.objects.get(id=id)
-    member.delete()
-    return redirect('/admincertificate')
+    if request.method == 'POST':
+        member.delete()
+        return redirect('/admincertificate')
+    return render(request, 'activities/delete.html')
+
+def deleteform(request):
+    return render(request, 'activities/delete.html')
 
     
 

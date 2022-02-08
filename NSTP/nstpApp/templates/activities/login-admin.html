@@ -24,15 +24,16 @@
 <body>
 
 
-    <div class="card" id="cards" style="width: 18rem;">
+    <div class="card" id="cards" style="width: 25rem;">
         <a href="../../landing_page/index.html">
             <div class="top">
+
                 <button id="logo"><a href="{% url 'activities:index' %}"><img src="{% static 'image/tup.png' %}"></a></button>
                 <h5>Technological University of the Philippines</h5>
             </div>
         </a>
         <form action="/admin" method="post">
-            {% csrf_token %}
+            {% include 'activities/messages.html' %} {% csrf_token %}
             <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
                 <input type="text" class="form-control" id="Email1" aria-describedby="emailHelp" name="username">
@@ -60,6 +61,11 @@
                 submitbtn.setAttribute('disabled', 'disabled');
             }
         });
+        setTimeout(function() {
+            if ($('#msg').length > 0) {
+                $('#msg').remove();
+            }
+        }, 3000)
     </script>
 
     <!-- BOOTSTRAP BUNDLE -->
