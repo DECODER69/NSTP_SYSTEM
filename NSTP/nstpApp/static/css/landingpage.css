@@ -192,8 +192,9 @@ nav {
     cursor: pointer;
 }
 
-.indention ol {
-    margin-left: 70px;
+.indent1 h3 ol li{
+    border: 50px;
+    margin-left: 60px;
 }
 
 .scrollspy-example h4 {

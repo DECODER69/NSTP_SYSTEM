@@ -241,7 +241,7 @@ password=password, section=section, field=field)
         
 def userlogin(request):
     if request.method=="POST":
-        m=sql.connect(host="localhost",user="admin",password="",database='nstpsystem')
+        m=sql.connect(host="localhost",user="root",password="",database='nstpsystem')
         cursor=m.cursor()
         d=request.POST
         for key,value in d.items():
