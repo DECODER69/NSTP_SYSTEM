@@ -106,10 +106,10 @@
                                 <td>{{file.name}}</td>
 
                                 <td>{% if file.pdf %}
-                                    <button class="pdf"><a style="text-decoration:none" href="{{file.pdf.url}}" target="__blank">DOWNLOAD</a></button> {% endif %}
+                                    <button class="pdf" disabled><a style="text-decoration:none" href="{{file.pdf.url}}" target="__blank">DOWNLOAD</a></button> {% endif %}
 
                                 </td>
-                                <td><button class="delete" value="none"><a style="text-decoration:none" href="{% url 'activities:charlie_delete' file.id %}" target="__blank">DELETE</a></button></td>
+                                <td><button class="delete" value="none" disabled><a style="text-decoration:none" href="{% url 'activities:charlie_delete' file.id %}" target="__blank">DELETE</a></button></td>
 
                             </tr>
                             {% endfor %}
