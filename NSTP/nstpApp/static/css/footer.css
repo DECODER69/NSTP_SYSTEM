@@ -1,3 +1,43 @@
 .page-footer {
     background-color: rgb(61, 61, 61)!important;
 }
+
+.color p{
+    color: white;
+}
+
+.content h5{
+    color: white;
+}
+
+.link1 h5{
+    color: white;
+}
+
+.link2 h5{
+    color: white;
+}
+
+.link3 h5{
+    color: white;
+}
+
+.link1 a{
+    color: white;
+}
+
+.link2 a{
+    color: white;
+}
+
+.link3 a{
+    color: white;
+}
+
+h5 {
+    color: white;
+}
+
+.backg {
+    background-color: black;
+}
