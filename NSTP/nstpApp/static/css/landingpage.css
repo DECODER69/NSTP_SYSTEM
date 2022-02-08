@@ -7,12 +7,16 @@
 }
 
 body {
-    background-color: white;
+    /* background-color: red */
     overflow-x: hidden;
 }
 
 h4 {
     color: #ffffff;
+}
+.headdd  {
+    padding: 100px;
+    background-color: #691a1b;
 }
 
 p {
@@ -20,6 +24,7 @@ p {
     padding-left: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
+    
 }
 
 #carouselExampleIndicators {
@@ -60,6 +65,10 @@ nav {
     background-color: #691a1b !important;
 }
 
+.dropdown-menu a {
+    background-color: #691a1b;
+}
+
 #FAQS {
     margin-top: 10px;
     background: transparent;
@@ -73,7 +82,7 @@ nav {
 }
 
 #navbarNavAltMarkup a {
-    color: white;
+    color: rgb(63, 63, 63);
     font-weight: bold;
 }
 
@@ -200,7 +209,9 @@ nav {
     color: black;
     margin-left: 40px;
 }
-
+.list-item-1{
+    color: #000000;
+}
 
 /* .load:before {
     content: '';

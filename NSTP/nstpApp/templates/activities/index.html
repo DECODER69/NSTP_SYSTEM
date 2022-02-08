@@ -1,7 +1,7 @@
-<!-- LANDING PAGE -->
 <!DOCTYPE html>
-<html lang="en">
 {% load static %}
+
+<html lang="en">
 
 <head>
 
@@ -9,14 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LANDING PAGE</title>
-    <link rel="shortcut icon" href="{% static 'image/logo.png' %}">
     <!-- ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/landingpage.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/landingpage.css' %}"> 
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
 
     <!-- CAROUSEL -->
 
-    <main>
+  
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 {% for im in images%}
@@ -158,8 +158,8 @@
 
 
 
-        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-            <h4 id="list-item-1">About NSTP?</h4>
+        <div class="headdd">
+            <h3 id="list-item-1">About NSTP?</h3>
             <p>
                 NSTP is a program aimed at enhancing civic consciousness and defense preparedness in the youth by developing the ethic of service and patriotism while undergoing training in any of its three (3) program components. Its various components are specially
                 designed to enhance the youth’s active contribution to the general welfare of the country. (Section 3, RA 9163) <br> <br> Graduates of the NSTP are encouraged to actively participate in the formation of School-Based National
@@ -168,13 +168,16 @@
 
 
 
+
             <div class="indent2">
                 <h3>Three Program Components:</h3>
-                <ol>
-                    <li>Reserve Office Training Corps (ROTC)</li>
-                    <li>Literacy Training Service (LTS)</li>
-                    <li>Civic Welfare Training Service (CWTS)</li>
-                </ol>
+                <p>
+                    Reserve Office Training Corps (ROTC) <br>
+                    Literacy Training Service (LTS) <br>
+                    Civic Welfare Training Service (CWTS) <br>
+ 
+                </p>
+                  
             </div>
 
 
@@ -186,9 +189,8 @@
             </p>
 
         </div>
-
         <!-- FOOTER -->
-        {% comment %} {% include 'activities/footer.html' %} {% endcomment %}
+        {% include 'activities/footer.html' %}
 
 
 
@@ -199,11 +201,16 @@
 
 
 
+        {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-        <script src="{% static '/js/landingpage.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> {% endcomment %}
+       
 
-    </main>
+    
+<script src="{% static '/js/landingpage.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 
 </html>
