@@ -14,7 +14,7 @@ class registration(models.Model):
     idnum = models.CharField(max_length=12, null=True, default='')
     lname = models.CharField(max_length=20, default='')
     fname = models.CharField(max_length=30, default='')
-    minitial = models.CharField(max_length=1, default='')
+    minitial = models.CharField(max_length=3, default='')
     address = models.CharField(max_length=100, default='')
     cpnumber = models.DecimalField(max_digits=11, decimal_places=0, default='')
     email = models.EmailField(max_length=254, null=True)

@@ -36,6 +36,7 @@
                 <h5>Technological University of the Philippines</h5>
             </div>
         </a>
+        {% include 'activities/messages.html' %}
         <div class="form-group" id="name">
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Lastname" required name="last_name">
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Firstname" required name="first_name">
@@ -108,6 +109,12 @@
             }
             return true
         }
+
+        setTimeout(function() {
+            if ($('#msg').length > 0) {
+                $('#msg').remove();
+            }
+        }, 3000)
     </script>
 
 
