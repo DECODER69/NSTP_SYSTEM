@@ -6,8 +6,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import context
 
 import nstpApp
-from .models import registration
+# from .models import registration
 from .models import certifications
+from .models import extenduser
 from .models import alphamodel, bravomodel, charliemodel, deltamodel, echomodel, foxtrotmodel, golfmodel, hotelmodel, indiamodel, julietmodel, kilomodel, limamodel, cwts, carousel
 
 
@@ -62,28 +63,33 @@ def indexcard4(request):
     return render(request, 'activities/index_card4.html')
 
 def rotclist(request):
-    list = registration.objects.filter(field='ROTC')
+    list = extenduser.objects.filter(field='ROTC')
     return render(request, 'activities/rotclist.html', {'list': list})
 def cwtslist(request):
-    list1 = registration.objects.filter(field='CWTS')
+    list1 = extenduser.objects.filter(field='CWTS')
     return render(request, 'activities/cwtslist.html', {'list1': list1})
 
 def adminrotclist(request):
-    rlist = registration.objects.filter(field='ROTC')
+    rlist = extenduser.objects.filter(field='ROTC')
     return render(request, 'activities/adminrotclist.html', {'rlist': rlist})
 
 def admincwtslist(request):
-    clist = registration.objects.filter(field='CWTS')
+    clist = extenduser.objects.filter(field='CWTS')
     return render(request, 'activities/admincwtslist.html', {'clist': clist})
 
 
 
-
+@login_required(login_url='/login')
 def dashboard(request):
-    return render(request, 'activities/Dashboard.html')
-def requested(request):
-    requests = certifications.objects.all()
-    return render(request, 'activities/certification.html', {'requests': requests})
+    name = extenduser.objects.filter(user = request.user)
+    return render(request, 'activities/dashboard.html', {'name': name})
+
+ 
+
+@login_required(login_url='/login')
+# def requested(request):
+#     requests = certifications.objects.filter(user = request.user)
+#     return render(request, 'activities/certification.html', {'requests': requests})
 
 # @login_required(login_url='/login')
 def platoon(request):
@@ -98,6 +104,7 @@ def cwtss(request):
 def userlogout(request):
 	return render(request, 'activities/login.html')
 
+@login_required(login_url='/login')
 def certification(request):
     requests = certifications.objects.all()
     return render(request, 'activities/certification.html', {'requests': requests})
@@ -179,7 +186,16 @@ def deleteimage(request, id):
         carouimage.delete()
         return redirect('/admindashboard')
     return render(request, 'activities/imagedelete.html')
+
+def pdf(request, id):
+    ss = certifications.objects.get(id=id)
+    return render(request, 'activities/certificate.html', {'ss': ss})
     
+def pdfb(request):
+    if request.method == 'POST':
+        f=request.POST.get('pdfbtn')
+        return render(request, 'activities/certificate.html', {'f': f})
+        
 
 
 def admincertificate(request):
@@ -245,6 +261,37 @@ def d_lima(request):
 def updateform(request):
     return render(request, 'activities/updateform.html')
 
+def registerprocess(request):
+    if request.method == 'POST':
+        try:
+            user = User.objects.get(username=request.POST['username'], email=request.POST['email'])
+            return render(request, 'activities/signup.html', {'error': 'User already exists'})
+        except:
+            username = request.POST['username']
+            lname=request.POST.get('last_name')
+            fname=request.POST.get('first_name')
+            minitial=request.POST.get('middle')
+            address=request.POST.get('address')
+            cpnumber=request.POST.get('contact')
+            email=request.POST.get('email')
+            gender=request.POST.get('gender')
+            age=request.POST.get('age')
+            bdate=request.POST.get('birthday')
+            password=request.POST.get('password')
+            section=request.POST.get('section')
+            field=request.POST.get('field')
+            
+            user = User.objects.create_user(username=username, password=password,)
+            
+            newextenduser = extenduser( lname=lname, fname=fname, minitial=minitial, address=address, cpnumber=cpnumber, email=email, gender=gender, age=age, bdate=bdate, 
+         password=password, section=section, field=field, user=user)
+            newextenduser.save()
+            auth.login(request, user)
+            return render(request, 'activities/login.html')
+    else:
+        return render(request, 'activities/login.html')
+                
+            
 
 
 
@@ -253,59 +300,68 @@ def updateform(request):
 
     
 
-def registerprocess(request):
-    if request.method == 'POST':
-        idnum=request.POST['idnum']
-        lname=request.POST.get('last_name')
-        fname=request.POST.get('first_name')
-        minitial=request.POST.get('middle')
-        address=request.POST.get('address')
-        cpnumber=request.POST.get('contact')
-        email=request.POST.get('email')
-        gender=request.POST.get('gender')
-        age=request.POST.get('age')
-        bdate=request.POST.get('birthday')
-        password=request.POST.get('password')
-        section=request.POST.get('section')
-        field=request.POST.get('field')
+# def registerprocess(request):
+#     if request.method == 'POST':
+#         idnum=request.POST['idnum']
+#         lname=request.POST.get('last_name')
+#         fname=request.POST.get('first_name')
+#         minitial=request.POST.get('middle')
+#         address=request.POST.get('address')
+#         cpnumber=request.POST.get('contact')
+#         email=request.POST.get('email')
+#         gender=request.POST.get('gender')
+#         age=request.POST.get('age')
+#         bdate=request.POST.get('birthday')
+#         password=request.POST.get('password')
+#         section=request.POST.get('section')
+#         field=request.POST.get('field')
         
-    try:
-        create = registration.objects.create(idnum=idnum, lname=lname, fname=fname, minitial=minitial, address=address, cpnumber=cpnumber, email=email, gender=gender, age=age, bdate=bdate, 
-        password=password, section=section, field=field)
-        create.save()
-        return render(request, 'activities/login.html')
-    except:
-        messages.error(request, 'Invalid Inputs! Please Check it and Try Again')
-        return render(request, 'activities/signup.html')
+#     try:
+#         create = registration.objects.create(idnum=idnum, lname=lname, fname=fname, minitial=minitial, address=address, cpnumber=cpnumber, email=email, gender=gender, age=age, bdate=bdate, 
+#         password=password, section=section, field=field)
+#         create.save()
+#         return render(request, 'activities/login.html')
+#     except:
+#         messages.error(request, 'Invalid Inputs! Please Check it and Try Again')
+#         return render(request, 'activities/signup.html')
         
     #  else:
     #      return render(request, 'activities/signup.html')
         
-def userlogin(request):
-    if request.method=="POST":
-        m=sql.connect(host="localhost",user="root",password="",database='nstpsystem')
-        cursor=m.cursor()
-        d=request.POST
-        for key,value in d.items():
-            if key=="username":
-                idnum=value
-            if key=="password":
-                password=value
+# def userlogin(request):
+#     if request.method=="POST":
+#         m=sql.connect(host="localhost",user="root",password="",database='nstpsystem')
+#         cursor=m.cursor()
+#         d=request.POST
+#         for key,value in d.items():
+#             if key=="username":
+#                 idnum=value
+#             if key=="password":
+#                 password=value
         
-        c="select * from nstpapp_registration where idnum='{}' and password='{}'".format(idnum,password)
+#         c="select * from nstpapp_registration where idnum='{}' and password='{}'".format(idnum,password)
         
-        cursor.execute(c)
-        t=tuple(cursor.fetchall())
-        if t==():
-            messages.error(request, 'Invalid username or password')
-            return render(request, 'activities/login.html')
+#         cursor.execute(c)
+#         t=tuple(cursor.fetchall())
+#         if t==():
+#             messages.error(request, 'Invalid username or password')
+#             return render(request, 'activities/login.html')
             
+#         else:
+#             # name = registration.objects.filter(idnum=idnum)
+#             return render(request, 'activities/Dashboard.html')
+
+#     return render(request, 'activities/login.html')
+def userlogin(request):
+    if request.method == 'POST':
+        user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/dashboard')
         else:
-            name = registration.objects.filter(idnum=idnum)
-            return render(request, 'activities/Dashboard.html', {'name': name})
-
-    return render(request, 'activities/login.html')
-
+            return render(request, 'activities/login.html')
+    else:
+        return render(request, 'activities/Dashboard.html')
 
 
 #       ADMIN LOGIN
@@ -334,7 +390,7 @@ def userlogin(request):
 
 #     return render(request, 'activities/login.html')
 
-def admin(request):
+def admin2(request):
     if request.method == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -351,7 +407,7 @@ def admin(request):
         return redirect('/adminlogin')
             
 
-@login_required(login_url='/login/')
+# @login_required(login_url='/login/')
 def cert(request):
     if request.method == 'POST':
         cert_email = request.POST.get('cert_email')
@@ -368,7 +424,6 @@ def cert(request):
        
 def logout_user(request):
     logout(request)
-    messages.success(request, ("You were Log out, please Log in again"))
     return redirect('/')
 
 

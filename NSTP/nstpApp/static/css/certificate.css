@@ -5,3 +5,7 @@ body {
 .line1 {
     border: solid 2px #000000;
 }
+
+h1 {
+    font-size: 300px;
+}

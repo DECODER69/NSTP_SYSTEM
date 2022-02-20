@@ -16,7 +16,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('login/', views.login, name='login'),
     path('adminlogin/', views.adminlogin, name='adminlogin'),
-    path('admin', views.admin, name='admin'),
+    path('admin2', views.admin2, name='admin2'),
     path('register/', views.register, name='register'),
     path('registerprocess/', views.registerprocess, name='registerprocess'),
     path('userlogin/', views.userlogin, name='userlogin'),
@@ -29,7 +29,7 @@ urlpatterns = [
     path('userlogout/', views.userlogout, name='userlogout'),
     path('certification/', views.certification, name='certification'),
     path('cert/', views.cert, name='cert'),
-    path('requested/', views.requested, name='requested'),
+    # path('requested/', views.requested, name='requested'),
     path('admincertificate/', views.admincertificate, name='admincertificate'),
     path('navadmin', views.navadmin, name='navadmin'),
     path('logout_user', views.logout_user, name='logout_user'),
@@ -54,6 +54,8 @@ urlpatterns = [
     path('deleteimage/<str:id>', views.deleteimage, name='deleteimage'),
  
     path('deleteform/', views.deleteform, name='deleteform'),
+    path('pdf/<str:id>', views.pdf, name='pdf'),
+    path('pdfb/<str:id>', views.pdfb, name='pdfb'),
     #             ADMIN PLATOON UPLOAD
     path('alpha/', views.alpha, name='alpha'),
     path('bravo/', views.bravo, name='bravo'),

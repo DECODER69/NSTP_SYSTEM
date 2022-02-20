@@ -19,15 +19,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: rgb(177, 177, 177);">
     {% include 'activities/base.html' %} {% block content %}
     <br>
+    <div class="top">
+        <div class="profile">
+            <h1 class="heads">Student's Information</h1>
+            <hr>
+            <div class="left">
+                {% for s in name %}
+                <p class="detail">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{s.fname}} {{s.lname}}</p>
+                <p class="detail">Course:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{s.section}}</p>
+                <p class="detail">Sex:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{s.gender}}</p>
+                {% endfor %}
+
+            </div>
+
+
+
+
+        </div>
+
+        <br>
+        <div class="option">
+            <h1 class="heads">Course Option</h1>
+            <hr>
+            <button class="drop"><a id="drop" href="#" style="text-decoration: none;">Drop Course</a></button>
+
+        </div>
+
+        <div class="status">
+            <h1 class="heads">Enrollment Status</h1>
+            <hr>
+            {% for s in name %}
+            <p class="estatus">{{s.status}}</p>
+            {% endfor %}
+
+        </div>
+
+
+    </div>
 
 
 
 
     <!-- carousel -->
 
+    {% comment %}
     <div class="inside-carou">
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -37,7 +75,7 @@
                 <div class="carousel-item active" data-interval="10000">
                     <img src="{% static 'image/im1.png' %}" class="d-block w-100" alt="...">
                 </div>
-               
+
                 <div class="carousel-item">
                     <img src="{% static 'image/im3.jpg' %}" class="d-block w-100" alt="...">
                 </div>
@@ -52,7 +90,7 @@
                 </button>
         </div>
 
-    </div> <br> <br>
+    </div> <br> <br> {% endcomment %}
 
     <div class="container">
         <div class="row">

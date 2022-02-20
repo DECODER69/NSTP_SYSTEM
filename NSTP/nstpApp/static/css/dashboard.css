@@ -10,25 +10,93 @@ main {
     padding: 20px 20px 20px 20px;
 }
 
-h4 {
-    color: #691a1b;
+p {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-p {
-    color: #691a1b;
-    padding-left: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.top {
+    display: flex;
+}
+
+.heads {
+    background-color: rgb(8, 69, 80);
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+}
+
+.profile {
+    background-color: #ffffff;
+    height: 30vh;
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.option {
+    background-color: #ffffff;
+    height: 30vh;
+    width: 25%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.drop {
+    background-color: #ee000091;
+    height: 8vh;
+    width: 45%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 30px;
+}
+
+#drop {
+    margin: auto;
+    display: flex;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.status {
+    background-color: #ffffff;
+    height: 30vh;
+    width: 25%;
+    margin: auto;
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+}
+
+.estatus {
+    color: #000000;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.detail {
+    color: #000000;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    width: 50%;
 }
 
 #FAQS {
     margin-top: 10px;
     background: transparent;
-}
-
-#FAQS h1 {
-    color: #691a1b;
-    font-weight: bolder;
 }
 
 #logo img {
@@ -44,15 +112,6 @@ p {
 .label {
     margin: 0;
     display: grid;
-}
-
-#signin-btn {
-    color: #691a1b;
-    border: 1px solid #691a1b;
-}
-
-#signin-btn:hover {
-    background-color: #b10012;
 }
 
 #try1 {
@@ -101,7 +160,7 @@ html {
 
 body {
     margin: 0;
-    background: white;
+    background: rgb(85, 78, 78);
     font-size: 1em;
 }
 
@@ -113,12 +172,6 @@ body {
     overflow: auto;
     border: 1px solid black;
     margin-top: 50px;
-}
-
-.wrapper {
-    border-style: dashed;
-    padding: 60px;
-    border-width: 10px;
 }
 
 .button-container-calendar button {

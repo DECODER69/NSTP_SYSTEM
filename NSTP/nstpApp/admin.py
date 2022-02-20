@@ -1,6 +1,6 @@
 from tabnanny import verbose
 from django.contrib import admin
-from .models import  registration, certifications, alphamodel, bravomodel, charliemodel, deltamodel, echomodel, foxtrotmodel, golfmodel, hotelmodel, indiamodel, julietmodel, kilomodel, limamodel, cwts, carousel
+from .models import  extenduser, certifications, alphamodel, bravomodel, charliemodel, deltamodel, echomodel, foxtrotmodel, golfmodel, hotelmodel, indiamodel, julietmodel, kilomodel, limamodel, cwts, carousel
 
 
 
@@ -19,7 +19,7 @@ from .models import  registration, certifications, alphamodel, bravomodel, charl
 # admin.site.register(User, CustomizedUserAdmin)
 # Register your models here.
 
-admin.site.register(registration)
+admin.site.register(extenduser)
 admin.site.register(certifications)
 admin.site.register(alphamodel)
 admin.site.register(bravomodel)
