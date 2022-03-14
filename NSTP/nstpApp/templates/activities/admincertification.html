@@ -50,7 +50,7 @@
                         {% for k in request1 %}
                         <tr>
                             <th scope="row">{{k.cert_email}}</th>
-                            <td>{{k.cert_fullname}}</td>
+                            <td id="certname">{{k.cert_fullname}}</td>
                             <td>{{k.cert_course}}</td>
                             <td>{{k.cert_document}}</td>
                             <form action="{% url 'activities:update' %}" method="post">
@@ -65,14 +65,16 @@
 
                                 <td><input type="hidden" name="getID" value="{{k.id}}"><button class="update" id="submit" onclick="sweetalert()" type="submit">Update</button>
                                     <button class="delete" disabled><a href="{% url 'activities:delete' k.id %}" id="delete" style="text-decoration: none;" name="delete">Delete</a></button>
-                                    
-                                    <button class="pdf" disabled><a href="{% url 'activities:pdf' k.id %}" value="{{k.cert_fullname}}" style="text-decoration: none;" target="__blank" name="pdfbtn">PDF</a></button>
+
+                                    <button class="pdf" disabled><a href="#" value="{{k.cert_fullname}}" style="text-decoration: none;" name="pdfbtn"  onclick="printDiv()">PDF</a></button>
+                                    <button>convert</button>
                                 </td>
 
                             </form>
 
 
                         </tr>
+
 
                         {% endfor %}
 
@@ -89,9 +91,18 @@
         </div>
 
     </div>
+    <!-- 
+    certificate -->
+
+    <div id="cer">
+        <p>Certificate</p>
+
+
+        <h1 scope="row">{% url 'activities:certi' %}</h1>
 
 
 
+    </div>
 
 
 

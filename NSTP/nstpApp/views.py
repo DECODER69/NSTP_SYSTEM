@@ -63,7 +63,7 @@ def indexcard4(request):
     return render(request, 'activities/index_card4.html')
 
 def rotclist(request):
-    list = extenduser.objects.filter(field='ROTC')
+    list = extenduser.objects.filter(field='ROTC').filter(status='ENROLLED')
     return render(request, 'activities/rotclist.html', {'list': list})
 def cwtslist(request):
     list1 = extenduser.objects.filter(field='CWTS')
@@ -191,11 +191,11 @@ def pdf(request, id):
     ss = certifications.objects.get(id=id)
     return render(request, 'activities/certificate.html', {'ss': ss})
     
-def pdfb(request):
+def certi(request):
     if request.method == 'POST':
-        f=request.POST.get('pdfbtn')
-        return render(request, 'activities/certificate.html', {'f': f})
-        
+        pd = request.post.GET('pdfbtn')
+        return render(request, 'activities/certificate.html', {'pd': pd})
+    return render(request, 'activities/certificate.html')
 
 
 def admincertificate(request):
@@ -205,6 +205,10 @@ def admincertificate(request):
 def navadmin(request):
     return render(request, 'activities/NavAdmin.html')
 
+def pdfb(request):
+    if request.method == 'POST':
+        pdfbt=request.POST.get('pdfbtn')
+        return render(request, 'activities/certificate.html', {'pdfbt': pdfbt})
 
 # admin platoon display
 
@@ -466,6 +470,12 @@ def update(request):
     certifications.objects.filter(id=stat2).update(cert_status=stat1)
     print(stat1, stat2)
     return redirect('/admincertificate')
+
+def enrollupdate(request):
+    en1 = request.POST.get('status')
+    en2 = request.POST.get('getID')
+    extenduser.objects.filter(id=en2).update(status=en1)
+    return redirect('/adminrotclist')
 
 
 

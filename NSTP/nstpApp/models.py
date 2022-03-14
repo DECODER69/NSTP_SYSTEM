@@ -40,7 +40,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 class extenduser(models.Model):
     STATUS = (
     ("PENDING", "PENDING"),
-    ("APPROVED", "APPROVED"),
+    ("ENROLLED", "ENROLLED"),
     )
 
     field_rotc = 0
